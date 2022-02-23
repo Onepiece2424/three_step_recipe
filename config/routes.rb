@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'recipes#index'
+  root 'recipes#top'
   get 'recipes/index'
   get 'recipes/show'
   get 'recipes/new'
