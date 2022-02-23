@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'recipes#index'
   get 'recipes/index'
   get 'recipes/show'
   get 'recipes/new'
