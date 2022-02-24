@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ header h1 {
+  background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+  color:aliceblue;
+}
+
+.login {
+  position:absolute; top:33px; right:33px;
+}
