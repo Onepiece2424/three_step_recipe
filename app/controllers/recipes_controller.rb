@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!, only: [:top]
+  before_action :authenticate_user!, except: [:top]
 
   def index
   end
