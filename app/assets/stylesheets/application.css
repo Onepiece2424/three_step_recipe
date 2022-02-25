@@ -22,3 +22,43 @@
 .login {
   position:absolute; top:33px; right:33px;
 }
+
+.signup {
+  padding-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.log {
+  padding-top: 30px;
+}
+
+input[type="email"] {
+  width: 80%;
+  height: 40px;
+  border-radius: 30px;
+}
+
+input[type="password"] {
+  width: 80%;
+  height: 40px;
+  border-radius: 30px;
+}
+
+.email {
+  padding-bottom: 50px;
+}
+
+.password {
+  padding-bottom: 50px;
+}
+
+.actions {
+  padding-top: 50px;
+}
+
+input[type="submit"] {
+  border-radius: 30px;
+  width: 30%;
+  height: 40px;
+}
