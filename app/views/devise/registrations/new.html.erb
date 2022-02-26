@@ -1,7 +1,7 @@
 <h2>Sign up</h2>
 
 <div class="signup">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="email">
@@ -22,12 +22,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="log">
+    <%= render "devise/shared/links" %>
   </div>
-<% end %>
-</div>
 
-<div class="log">
-  <%= render "devise/shared/links" %>
+  <div class="actions">
+    <%= f.submit "Sign up（ユーザー新規登録）" %>
+  </div>
+  <% end %>
 </div>

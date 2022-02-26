@@ -30,7 +30,7 @@
 }
 
 .log {
-  padding-top: 30px;
+  padding-top: 90px;
 }
 
 input[type="email"] {
@@ -59,6 +59,22 @@ input[type="password"] {
 
 input[type="submit"] {
   border-radius: 30px;
-  width: 30%;
+  margin-top: 50px;
+  width: 80%;
   height: 40px;
+  /* background: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%); */
+  background: #D9E5FF;
+  color: #7B3CFF;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.remember {
+  padding-top: 20px;
+}
+
+.forgot {
+  margin: 50px auto;
 }
