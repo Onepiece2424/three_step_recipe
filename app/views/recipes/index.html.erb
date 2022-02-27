@@ -1,1 +1,7 @@
-<h1>メインページです。</h1>
+<h3>My recipe</h3>
+<% @recipes.each do |recipe| %>
+  <%= recipe.process1 %>
+  <%= recipe.process2 %>
+  <%= recipe.process3 %>
+<% end %>
+<%= link_to "Create a new recipe", new_recipe_path %>
