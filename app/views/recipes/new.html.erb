@@ -5,16 +5,20 @@
   <div class="flexbox">
     <div class="main_procedure">
       <div class="sub_process">
+        <%= form.label :title, 'Recipe Title' %>
+        <%= form.text_field :title  %>
+      </div>
+      <div class="sub_process">
         <%= form.label :process1, 'Recipe procedure①' %>
-        <%= form.text_area :process1 %>
+        <%= form.text_field :process1  %>
       </div>
       <div class="sub_process">
         <%= form.label :process2, 'Recipe procedure②' %>
-        <%= form.text_area :process2 %>
+        <%= form.text_field :process2 %>
       </div>
       <div class="sub_process">
         <%= form.label :process3, 'Recipe procedure③' %>
-        <%= form.text_area :process3 %>
+        <%= form.text_field :process3 %>
       </div>
     </div>
   </div>
