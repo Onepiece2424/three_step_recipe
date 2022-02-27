@@ -81,12 +81,10 @@ input[type="submit"]:hover {
 .main {
   text-align: center;
   margin: 50px 10%;
-  background-color: aquamarine;
   width: 1100px;
 }
 
 .main_procedure {
-  text-align: right;
   padding: 30px 0px;
 }
 
@@ -95,5 +93,15 @@ input[type="submit"]:hover {
 }
 
 .new_button {
-  padding-top: 30px;
+  padding-top: 80px;
+  position: fixed;
+}
+
+.main_page {
+  margin: 0 10%;
+}
+
+.new_recipe {
+  padding-top: 520px;
+  position: fixed;
 }
