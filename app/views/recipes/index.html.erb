@@ -10,7 +10,6 @@
           <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
         <% end %>
       </div>
-
       <div class="new_recipe">
         <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
       </div>
