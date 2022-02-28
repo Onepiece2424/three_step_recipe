@@ -58,3 +58,4 @@ gem 'omniauth-twitter'
 gem 'pry-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'bootsnap', require: false
