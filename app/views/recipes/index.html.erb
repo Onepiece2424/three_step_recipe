@@ -1,18 +1,17 @@
-<h3>My recipe</h3>
-
 <div class="main_page">
+  <h3>My recipe</h3>
   <div class="container">
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <% @recipes.each do |recipe| %>
           <%= recipe.title %>
           <%= link_to 'Edit', edit_recipe_path(recipe) %>
           <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
         <% end %>
       </div>
-      <div class="new_recipe">
-        <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
-      </div>
     </div>
+  </div>
+  <div class="new_recipe">
+    <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
   </div>
 </div>
