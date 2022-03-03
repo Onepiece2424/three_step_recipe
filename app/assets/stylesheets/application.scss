@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+//ヘッダー
+ header h1 {
+  background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+  color:aliceblue;
+}
+
+
+//ログイン＆ユーザー登録ボタン
+.login {
+  position:absolute; top:15px; right:25px;
+  color: black;
+}
+
+//ユーザー新規登録画面
+// .signup {
+//   padding-top: 30px;
+//   width: 100%;
+//   text-align: center;
+// }
+
+.log {
+  padding-top: 90px;
+}
+
+input[type="email"],input[type="password"],input[type="text"] {
+  width: 80%;
+  height: 40px;
+  border-radius: 30px;
+}
+
+.email,.password,.actions {
+  padding-bottom: 50px;
+}
+
+.actions {
+  padding-top: 50px;
+}
+
+//パスワードはお忘れですかボタン
+.forgot {
+  margin: 50px auto;
+}
+
+
+.main {
+  text-align: center;
+  margin: 50px 10%;
+  width: 1100px;
+}
+
+.main_procedure {
+  padding: 30px 0px;
+}
+
+.sub_process {
+  padding: 30px 0px;
+}
+
+// .new_button {
+//   padding-top: 80px;
+//   position: fixed;
+// }
+
+
+//メインページ(recipe/index.html.erb）
+.main_page {
+  width: 1150px;
+  height: 680px;
+  margin: 30px 10%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}

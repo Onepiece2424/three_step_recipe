@@ -1,2 +1,29 @@
-<h1>Recipes#new</h1>
-<p>Find me in app/views/recipes/new.html.erb</p>
+<h3>Create a new recipe</h3>
+
+<div class="main">
+  <%= form_with model: @recipe do |form| %>
+  <div class="flexbox">
+    <div class="main_procedure">
+      <div class="sub_process">
+        <%= form.label :title, 'Recipe Title' %>
+        <%= form.text_field :title  %>
+      </div>
+      <div class="sub_process">
+        <%= form.label :process1, 'Recipe procedure①' %>
+        <%= form.text_field :process1 %>
+      </div>
+      <div class="sub_process">
+        <%= form.label :process2, 'Recipe procedure②' %>
+        <%= form.text_field :process2 %>
+      </div>
+      <div class="sub_process">
+        <%= form.label :process3, 'Recipe procedure③' %>
+        <%= form.text_field :process3 %>
+      </div>
+    </div>
+  </div>
+  <div class="new_button">
+    <%= form.submit %>
+  </div>
+  <% end %>
+</div>
