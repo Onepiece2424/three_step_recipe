@@ -3,20 +3,22 @@
     <h3>My recipe</h3>
     <div class="container">
       <% @recipes.each do |recipe| %>
-        <div class="card card-skin">
-          <div class="card__imgframe">
-            <%= image_tag recipe.images[0],size: '303x178' %>
-          </div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              <%= recipe.title %>
+        <%= link_to recipe_path(recipe) do %>
+          <div class="card card-skin">
+            <div class="card__imgframe">
+              <%= image_tag recipe.images[0],size: '303x178' %>
             </div>
-            <div class="card__overviewtext">
-              <%= link_to 'Edit', edit_recipe_path(recipe) %>
-              <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+            <div class="card__textbox">
+              <div class="card__titletext">
+                <%= recipe.title %>
+              </div>
+              <div class="card__overviewtext">
+                <%= link_to 'Edit', edit_recipe_path(recipe) %>
+                <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
     <div class="new_recipe">
