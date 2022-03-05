@@ -2,22 +2,22 @@
   <div class="main_in_page">
     <h3>My recipe</h3>
     <div class="container">
-          <% @recipes.each do |recipe| %>
-            <div class="card card-skin">
-              <div class="card__imgframe">
-                <%= image_tag recipe.images[0],size: '303x178' %>
-              </div>
-              <div class="card__textbox">
-                <div class="card__titletext">
-                  <%= recipe.title %>
-                </div>
-                <div class="card__overviewtext">
-                  <%= link_to 'Edit', edit_recipe_path(recipe) %>
-                  <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
-                </div>
-              </div>
+      <% @recipes.each do |recipe| %>
+        <div class="card card-skin">
+          <div class="card__imgframe">
+            <%= image_tag recipe.images[0],size: '303x178' %>
+          </div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              <%= recipe.title %>
             </div>
-          <% end %>
+            <div class="card__overviewtext">
+              <%= link_to 'Edit', edit_recipe_path(recipe) %>
+              <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
     <div class="new_recipe">
       <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
