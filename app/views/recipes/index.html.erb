@@ -16,7 +16,9 @@
     </div>
     <% @recipes.each do |recipe| %>
       <div class="card card-skin">
-        <div class="card__imgframe"><%= image_tag recipe.images[0],size: '303x178' %></div>
+        <div class="card__imgframe">
+          <%= image_tag recipe.images[0],size: '303x178' %>
+        </div>
         <div class="card__textbox">
           <div class="card__titletext">
             <%= recipe.title %>
