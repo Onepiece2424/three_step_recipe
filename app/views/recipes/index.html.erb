@@ -1,21 +1,21 @@
 <div class="main_page">
   <div class="main_in_page">
-  <h3>My recipe</h3>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <% @recipes.each do |recipe| %>
-          <%= recipe.title %>
-          <%= image_tag recipe.images[0],size: '200x200' %>
-          <%= link_to 'Show', recipe_path(recipe) %>
-          <%= link_to 'Edit', edit_recipe_path(recipe) %>
-          <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
-        <% end %>
+    <h3>My recipe</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <% @recipes.each do |recipe| %>
+            <%= recipe.title %>
+            <%= image_tag recipe.images[0],size: '200x200' %>
+            <%= link_to 'Show', recipe_path(recipe) %>
+            <%= link_to 'Edit', edit_recipe_path(recipe) %>
+            <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="new_recipe">
-    <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
-  </div>
+    <div class="new_recipe">
+      <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
+    </div>
   </div>
 </div>
