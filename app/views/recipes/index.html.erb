@@ -5,31 +5,24 @@
       <div class="row">
         <div class="col-md-3">
           <% @recipes.each do |recipe| %>
-            <%= recipe.title %>
-            <%= image_tag recipe.images[0],size: '200x200' %>
-            <%= link_to 'Show', recipe_path(recipe) %>
-            <%= link_to 'Edit', edit_recipe_path(recipe) %>
-            <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+            <div class="card card-skin">
+              <div class="card__imgframe">
+                <%= image_tag recipe.images[0],size: '303x178' %>
+              </div>
+              <div class="card__textbox">
+                <div class="card__titletext">
+                  <%= recipe.title %>
+                </div>
+                <div class="card__overviewtext">
+                  <%= link_to 'Edit', edit_recipe_path(recipe) %>
+                  <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+                </div>
+              </div>
+            </div>
           <% end %>
         </div>
       </div>
     </div>
-    <% @recipes.each do |recipe| %>
-      <div class="card card-skin">
-        <div class="card__imgframe">
-          <%= image_tag recipe.images[0],size: '303x178' %>
-        </div>
-        <div class="card__textbox">
-          <div class="card__titletext">
-            <%= recipe.title %>
-          </div>
-          <div class="card__overviewtext">
-            <%= link_to 'Edit', edit_recipe_path(recipe) %>
-            <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
-          </div>
-        </div>
-      </div>
-    <% end %>
     <div class="new_recipe">
       <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
     </div>
