@@ -18,7 +18,7 @@
 
 body {
   width: 100%;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
 //ヘッダー
@@ -27,13 +27,13 @@ header {
   color:aliceblue;
   width: 100%;
   height: 62px;
-  margin: 0 10px;
+  // margin: 0px 10px;
 }
 
 header h1 {
   width: 287px;
   height: 37px;
-  padding-left: 35px;
+  padding-left: 10px;
 }
 
 //ログイン＆ユーザー登録ボタン
@@ -75,6 +75,10 @@ input[type="email"],input[type="password"],input[type="text"] {
 //メインページ(recipe/index.html.erb）
 .main_page {
   width: 100%;
+  margin: 0;
+}
+
+.main_in_page {
   margin: 0 10px;
 }
 
