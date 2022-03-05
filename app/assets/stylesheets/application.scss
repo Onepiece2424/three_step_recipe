@@ -16,16 +16,26 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 
-//ヘッダー
- header h1 {
-  background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
-  color:aliceblue;
+body {
+  width: 100%;
+  margin: 0px;
 }
 
+//ヘッダー
+header {
+  background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+  color:aliceblue;
+  height: 62px;
+}
+
+header h1 {
+  width: 287px;
+  height: 37px;
+}
 
 //ログイン＆ユーザー登録ボタン
 .login {
-  position:absolute; top:15px; right:25px;
+  position:absolute; top:35px; right:25px;
   color: black;
 }
 
@@ -59,7 +69,20 @@ input[type="email"],input[type="password"],input[type="text"] {
   margin: 50px auto;
 }
 
+//メインページ(recipe/index.html.erb）
+.main_page {
+  // width: 1150px;
+  height: 680px;
+  // margin: 30px 10%;
+  background-color: aquamarine;
+}
 
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+//recipe/newアクションページ
 .main {
   text-align: center;
   margin: 50px 10%;
@@ -78,16 +101,3 @@ input[type="email"],input[type="password"],input[type="text"] {
 //   padding-top: 80px;
 //   position: fixed;
 // }
-
-
-//メインページ(recipe/index.html.erb）
-.main_page {
-  width: 1150px;
-  height: 680px;
-  margin: 30px 10%;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-}
