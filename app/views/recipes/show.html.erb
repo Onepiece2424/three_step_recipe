@@ -1,1 +1,6 @@
-<h1>こんにちは、<%= current_user.username %>さん</h1>aa
+<h1>こんにちは、<%= current_user.username %>さん</h1>
+<% if @recipe.images.attached? %>
+  <% @recipe.images.each do |image| %>
+    <%= image_tag image %> <br>
+  <% end %>
+<% end %>

@@ -44,6 +44,6 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:title,:process1,:process2,:process3)
+    params.require(:recipe).permit(:title,:process1,:process2,:process3, images: [])
   end
 end
