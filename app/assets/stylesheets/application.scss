@@ -154,8 +154,27 @@ input[type="email"],input[type="password"],input[type="text"] {
 .main_in_page2 {
   margin: 13px 244px;
   display: flex;
+  // background-color: blueviolet;
 }
 
-.process_block1,.process_block2,.process_block3 {
+// .main_left {
+//   // background-color: #E4A972;
+// }
+
+// .main_left2 {
+//   padding-right: 30px;
+// }
+
+.main_right {
+  display:flex;
+  flex-flow: column;
+  height: 678px;
+  width: 100%;
+  padding: 0px 50px;
+}
+
+.process_block {
+  padding:1em;
+  margin:0.5em auto;
   height: 226px;
 }

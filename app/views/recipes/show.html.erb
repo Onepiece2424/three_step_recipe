@@ -1,20 +1,22 @@
 <div class="main_page">
   <div class="main_in_page2">
     <div class="main_left">
+    <div class="main_left2">
       <% if @recipe.images.attached? %>
         <% @recipe.images.each do |image| %>
-          <%= image_tag image.variant(resize: "480x220!") %>
+          <%= image_tag image.variant(resize: "440x220!") %>
         <% end %>
       <% end %>
     </div>
+    </div>
     <div class="main_right">
-      <div class="process_block1">
+      <div class="process_block">
         <%= @recipe.process1 %>
       </div>
-      <div class="process_block2">
+      <div class="process_block">
         <%= @recipe.process2 %>
       </div>
-      <div class="process_block3">
+      <div class="process_block">
         <%= @recipe.process3 %>
       </div>
     </div>
