@@ -1,5 +1,9 @@
-<% if @recipe.images.attached? %>
-  <% @recipe.images.each do |image| %>
-    <%= image_tag image.variant(resize: "200x200") %> <br>
-  <% end %>
-<% end %>
+<div class="main_page">
+  <div class="main_in_page2">
+    <% if @recipe.images.attached? %>
+      <% @recipe.images.each do |image| %>
+        <%= image_tag image.variant(resize: "480x220!") %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
