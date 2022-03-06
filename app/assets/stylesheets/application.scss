@@ -153,4 +153,9 @@ input[type="email"],input[type="password"],input[type="text"] {
 //レシピ詳細ページ
 .main_in_page2 {
   margin: 13px 244px;
+  display: flex;
+}
+
+.process_block1,.process_block2,.process_block3 {
+  height: 226px;
 }
