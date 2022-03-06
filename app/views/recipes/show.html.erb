@@ -34,9 +34,10 @@
       <hr>
     </div>
   <% end %>
-
-  <%= form_for [@recipe, @comment] do |f| %>
+  <%= form_with model: [@recipe, @comment] do |f| %>
     <%= f.text_field :comment_content %>
+    <%= f.hidden_field :recipe_id, value: @recipe.id %>
+    <br>
     <br>
     <%= f.submit 'コメントする' %>
   <% end %>

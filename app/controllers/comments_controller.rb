@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    # @comment = Comment.new(comment_params)
-    @comment = current_user.comments.new(comment_params)
+    @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
       redirect_back(fallback_location: root_path)
@@ -12,6 +11,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:comment_content)
+    params.require(:comment).permit(:comment_content,:recipe_id)
   end
 end
