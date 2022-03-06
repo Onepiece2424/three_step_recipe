@@ -31,8 +31,9 @@
   <% @comments.each do |c| %>
     <div>
       <%= c.comment_content %>
-      <hr>
     </div>
+    <hr>
+      <%= link_to "Delete a comment", recipe_comment_path(c.id), method: :delete %>
   <% end %>
   <%= form_with model: [@recipe, @comment] do |f| %>
     <%= f.text_field :comment_content %>
