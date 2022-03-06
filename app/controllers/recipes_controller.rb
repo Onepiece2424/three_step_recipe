@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:top]
 
   def index
-    @recipes = Recipe.all.with_attached_images
+    @recipes = Recipe.with_attached_images
   end
 
   def new
