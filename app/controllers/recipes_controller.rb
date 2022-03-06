@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:top]
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.with_attached_images
   end
 
   def new
@@ -44,6 +44,6 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:title,:process1,:process2,:process3)
+    params.require(:recipe).permit(:title,:process1,:process2,:process3, images: [])
   end
 end

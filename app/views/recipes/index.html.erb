@@ -1,17 +1,28 @@
 <div class="main_page">
-  <h3>My recipe</h3>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <% @recipes.each do |recipe| %>
-          <%= recipe.title %>
-          <%= link_to 'Edit', edit_recipe_path(recipe) %>
-          <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+  <div class="main_in_page">
+    <h3>My recipe</h3>
+    <div class="container">
+      <% @recipes.each do |recipe| %>
+        <%= link_to recipe_path(recipe) do %>
+          <div class="card card-skin">
+            <div class="card__imgframe">
+              <%= image_tag recipe.images[0], size: '303x178' %>
+            </div>
+            <div class="card__textbox">
+              <div class="card__titletext">
+                <%= recipe.title %>
+              </div>
+              <div class="card__overviewtext">
+                <%= link_to 'Edit', edit_recipe_path(recipe) %>
+                <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+              </div>
+            </div>
+          </div>
         <% end %>
-      </div>
+      <% end %>
     </div>
-  </div>
-  <div class="new_recipe">
-    <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
+    <div class="new_recipe">
+      <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
+    </div>
   </div>
 </div>
