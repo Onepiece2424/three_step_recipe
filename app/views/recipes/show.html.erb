@@ -25,3 +25,19 @@
     </div>
   </div>
 </div>
+
+<div class="comment_block">
+  <h2>コメント一覧</h2>
+  <% @comments.each do |c| %>
+    <div>
+      <%= c.comment_content %>
+      <hr>
+    </div>
+  <% end %>
+
+  <%= form_for [@recipe, @comment] do |f| %>
+    <%= f.text_field :comment_content %>
+    <br>
+    <%= f.submit 'コメントする' %>
+  <% end %>
+</div>
