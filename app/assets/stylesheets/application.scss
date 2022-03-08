@@ -194,13 +194,23 @@ input[type="email"],input[type="password"],input[type="text"] {
 }
 
 .comment_text {
-  padding: 0.5em 1em;
-  margin: 2em 0;
-  font-weight: bold;
-  color: black;/*文字色*/
-  background: #FFF;
-  border: solid 3px #6091d3;/*線*/
-  border-radius: 10px;/*角の丸み*/
+  position: relative;
+    padding: 0.5em 0.7em;
+    margin: 2em 0;
+    background: #e6f4ff;
+    color: #5c98d4;
+    font-weight: bold;
+}
+
+.comment_text:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e6f4ff;
+  width: 0;
+  height: 0;
 }
 
 .userList{
