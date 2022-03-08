@@ -3,7 +3,7 @@
     <h3>My recipe</h3>
     <div class="container">
       <% @recipes.each do |recipe| %>
-        <%= link_to recipe_path(recipe) do %>
+        <%= link_to(recipe_path(recipe), class:"userList") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
               <%= image_tag recipe.images[0], size: '303x178' %>
@@ -13,8 +13,8 @@
                 <%= recipe.title %>
               </div>
               <div class="card__overviewtext">
-                <%= link_to 'Edit', edit_recipe_path(recipe) %>
-                <%= link_to 'Delete', recipe_path(recipe), method: :delete %>
+                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList" %>
+                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList" %>
               </div>
             </div>
           </div>
