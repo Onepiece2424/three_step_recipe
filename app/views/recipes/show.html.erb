@@ -27,10 +27,10 @@
   <div class="comment_block">
   <h2>コメント一覧</h2>
     <div class="comment_main">
-      <% @comments.each do |c| %>
+      <% current_user.comments.each do |c| %>
         <div class="comment_text">
           <%= c.comment_content %>
-        
+          <br>
           <%= link_to "Delete a comment", recipe_comment_path(c.recipe.id,c.id), method: :delete %>
         </div>
       <% end %>
