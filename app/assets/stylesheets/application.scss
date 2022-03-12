@@ -27,7 +27,6 @@ header {
   color:aliceblue;
   width: 100%;
   height: 62px;
-  // margin: 0px 10px;
 }
 
 header h1 {
@@ -54,7 +53,7 @@ header h1 {
 }
 
 input[type="email"],input[type="password"],input[type="text"] {
-  width: 80%;
+  width: 100%;
   height: 40px;
   border-radius: 30px;
 }
@@ -72,7 +71,7 @@ input[type="email"],input[type="password"],input[type="text"] {
   margin: 50px auto;
 }
 
-//メインページ(recipe/index.html.erb）
+//メインページ(recipe/index.html.erb）、レシピ詳細ページ（recipe/show.html.erb）
 .main_page {
   width: 100%;
   margin: 0;
@@ -177,4 +176,43 @@ input[type="email"],input[type="password"],input[type="text"] {
   padding:1em;
   margin:0.5em auto;
   height: 226px;
+}
+
+//コメント部分
+.comment_block {
+  margin: 100px 244px;
+}
+
+.comment_main {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: #6091d3;/*文字色*/
+  background: #FFF;
+  border: solid 3px #6091d3;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
+.comment_text {
+  position: relative;
+    padding: 0.5em 0.7em;
+    margin: 2em 0;
+    background: #e6f4ff;
+    color: #5c98d4;
+    font-weight: bold;
+}
+
+.comment_text:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e6f4ff;
+  width: 0;
+  height: 0;
+}
+
+.userList{
+  text-decoration: none;
 }
