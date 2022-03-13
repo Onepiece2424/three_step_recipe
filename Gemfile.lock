@@ -95,6 +95,8 @@ GEM
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
@@ -185,6 +187,10 @@ GEM
       rake (>= 0.13)
       thor (~> 1.0)
     rake (13.0.6)
+    ransack (2.4.1)
+      activerecord (>= 5.2.4)
+      activesupport (>= 5.2.4)
+      i18n
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -262,6 +268,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  font-awesome-rails
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   jquery-rails
@@ -272,6 +279,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.4)
+  ransack
   sass-rails (>= 6)
   selenium-webdriver
   spring

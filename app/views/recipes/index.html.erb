@@ -1,12 +1,27 @@
 <div class="main_page">
   <div class="main_in_page">
+    <div class="search_form">
+      <%= search_form_for @q, url: search_recipes_path do |f| %>
+        <%= f.label :title_cont, 'キーワード検索' %>
+        <div class="search_block">
+          <%= f.search_field :title_cont, placeholder: "Recipe Keywords", size: "40x30" %>
+          <%= f.button :type => "submit", style: 'border-style: none;' do %>
+            <i class="fa fa-search"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
     <h3>My recipe</h3>
     <div class="container">
       <% @recipes.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
-              <%= image_tag recipe.images[0], size: '303x178' %>
+              <% if recipe.images.blank? %>
+                <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '303x178' %>
+              <% else %>
+                <%= image_tag recipe.images[0], size: '303x178' %>
+              <% end %>
             </div>
             <div class="card__textbox">
               <div class="card__titletext">

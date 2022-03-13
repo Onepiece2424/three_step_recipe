@@ -1,8 +1,13 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:top]
+  before_action :set_q, only: [:index, :search]
 
   def index
     @recipes = Recipe.with_attached_images
+  end
+
+  def search
+    @results = @q.result
   end
 
   def new
@@ -47,5 +52,9 @@ class RecipesController < ApplicationController
 
   def recipe_params
     params.require(:recipe).permit(:title,:process1,:process2,:process3, images: [])
+  end
+
+  def set_q
+    @q = Recipe.ransack(params[:q])
   end
 end
