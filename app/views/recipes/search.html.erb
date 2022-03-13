@@ -6,7 +6,11 @@
         <%= link_to(recipe_path(recipe), class:"userList") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
-              <%= image_tag recipe.images[0], size: '303x178' %>
+              <% if recipe.images.blank? %>
+                <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '303x178' %>
+              <% else %>
+                <%= image_tag recipe.images[0], size: '303x178' %>
+              <% end %>
             </div>
             <div class="card__textbox">
               <div class="card__titletext">
@@ -20,9 +24,6 @@
           </div>
         <% end %>
       <% end %>
-    </div>
-    <div class="new_recipe">
-      <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
     </div>
   </div>
 </div>
