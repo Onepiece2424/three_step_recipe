@@ -1,17 +1,8 @@
 <div class="main_page">
   <div class="main_in_page">
-      <div class="search_form">
-      <%= search_form_for @q, url: search_recipes_path do |f| %>
-        <%= f.label :title_cont, 'レシピ名' %>
-        <%= f.search_field :title_cont %>
-        <br>
-        <br>
-        <%= f.submit '検索' %>
-      <% end %>
-    </div>
     <h3>My recipe</h3>
     <div class="container">
-      <% @recipes.each do |recipe| %>
+      <% @results.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
