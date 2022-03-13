@@ -131,7 +131,12 @@ input[type="email"],input[type="password"],input[type="text"] {
 
 .new_recipe {
   text-align: center;
-  margin: 300px 600px 35px;
+  margin: 100px 600px 35px;
+}
+
+.search_form {
+  text-align: center;
+  margin: 30px 0px;
 }
 
 //recipe/newアクションページ
@@ -220,4 +225,21 @@ input[type="email"],input[type="password"],input[type="text"] {
 
 .userList{
   text-decoration: none;
+}
+
+//トップページ（recipes/top.html.erb）
+.main_background {
+  background-image: url("/images/black-bean-close-up-cooked-16407741.png");
+  height: 700px;
+  width: 100%;
+  margin: 0;
+  background-size: cover;
+}
+
+.main_title {
+  text-align: center;
+  padding: 200px 0px;
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
 }
