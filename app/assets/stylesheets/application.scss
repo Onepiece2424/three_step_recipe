@@ -205,11 +205,11 @@ input[type="email"],input[type="password"],input[type="text"] {
 
 .comment_text {
   position: relative;
-    padding: 0.5em 0.7em;
-    margin: 2em 0;
-    background: #e6f4ff;
-    color: #5c98d4;
-    font-weight: bold;
+  padding: 0.5em 0.7em;
+  margin: 2em 0;
+  background: #e6f4ff;
+  color: #5c98d4;
+  font-weight: bold;
 }
 
 .comment_text:after {
@@ -240,6 +240,10 @@ input[type="email"],input[type="password"],input[type="text"] {
   text-align: center;
   padding: 200px 0px;
   font-size: 100px;
-  color: white;
   font-weight: bold;
+}
+
+.title_css {
+  text-decoration: none;
+  color: white;
 }
