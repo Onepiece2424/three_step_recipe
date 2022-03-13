@@ -140,18 +140,17 @@ input[type="email"],input[type="password"],input[type="text"] {
   margin: 30px 0px;
 }
 
-.search_form input[type=search_field] {
-width: 100%;
-font-size: 20px;
-padding: 0 6px;
-color: #474747;
-border: 2px solid #474747;
-border-radius: 3px 0 0 3px;
-outline: none;
+.search_block {
+  width: 100%;
+  font-size: 20px;
+  padding: 0 6px;
+  color: #474747;
+  border-radius: 3px 0 0 3px;
+  outline: none;
 }
 
 .search_form button[type=submit] {
-font-size: 16px;
+font-size: 17px;
 color: #FFF;
 background: #474747;
 border: 2px solid #474747;

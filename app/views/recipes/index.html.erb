@@ -3,10 +3,12 @@
     <div class="search_form">
       <%= search_form_for @q, url: search_recipes_path do |f| %>
         <%= f.label :title_cont, 'キーワード検索' %>
-        <%= f.search_field :title_cont, placeholder: "Recipe Keywords", size: "40x20" %>
-        <%= f.button :type => "submit", style: 'border-style: none;' do %>
-          <i class="fa fa-search"></i>
-        <% end %>
+        <div class="search_block">
+          <%= f.search_field :title_cont, placeholder: "Recipe Keywords", size: "40x30" %>
+          <%= f.button :type => "submit", style: 'border-style: none;' do %>
+            <i class="fa fa-search"></i>
+          <% end %>
+        </div>
       <% end %>
     </div>
     <h3>My recipe</h3>
