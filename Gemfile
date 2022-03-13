@@ -61,4 +61,4 @@ gem 'jquery-rails'
 gem 'bootsnap', require: false
 gem 'mini_magick'
 gem 'ransack'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
