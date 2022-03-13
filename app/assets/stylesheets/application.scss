@@ -15,6 +15,7 @@
  */
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "font-awesome";
 
 body {
   width: 100%;
@@ -137,6 +138,36 @@ input[type="email"],input[type="password"],input[type="text"] {
 .search_form {
   text-align: center;
   margin: 30px 0px;
+}
+
+.search input[type=text] {
+width: 100%;
+font-size: 20px;
+padding: 0 6px;
+color: #474747;
+border: 2px solid #474747;
+border-radius: 3px 0 0 3px;
+outline: none;
+}
+
+.search button[type=submit] {
+padding: 10px 20px;
+font-size: 16px;
+color: #FFF;
+background: #474747;
+border: 2px solid #474747;
+border-radius: 0 3px 3px 0;
+cursor: pointer;
+}
+
+/* colors */
+.royalblue input[type=text] {
+border-color: #4169e1;
+}
+
+.royalblue button[type=submit] {
+border-color: #4169e1;
+background: #4169e1;
 }
 
 //recipe/newアクションページ
