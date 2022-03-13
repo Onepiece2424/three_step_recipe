@@ -266,3 +266,45 @@ cursor: pointer;
   text-decoration: none;
   color: white;
 }
+
+//マイページ
+.mypage_main {
+  margin: 0 10px;
+  display: flex;
+  height: 650px;
+}
+
+.my_image {
+  width: 50%;
+  height: 600px;
+  text-align: center;
+  margin: 25px 0px;
+}
+
+.name_follow {
+  width: 50%;
+  text-align: center;
+  margin: 100px 0px;
+}
+
+.circle{
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-image: url("/images/マスクグループ 1.png");
+}
+
+.my_name {
+  height: 250px;
+}
+
+.my_follow {
+  height: 250px;
+}
+
+.top_back_button {
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+}

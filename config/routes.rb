@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     end
     resources :comments, only:[:create, :destroy]
   end
-  get '/users/:id', to: 'users#show'
+  resources :users, only: :show
 end

@@ -1,3 +1,22 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<%= @user.username %>
+<div class="main_page">
+  <div class="mypage_main">
+    <div class="my_image">
+      <div class="circle"></div>
+    </div>
+    <div class="name_follow">
+      <div class="my_name">
+        <p><%= current_user.username %></p>
+        <p><%= current_user.email %></p>
+      </div>
+      <div class="my_follow">
+      FOLLOW
+      </div>
+    </div>
+  </div>
+  <div class="top_back_button">
+    <%= link_to  recipes_path, class: 'btn btn-default' do %>
+      <i class="fa fa-arrow-left"></i>
+      <span>トップページへ戻る</span>
+    <% end %>
+  </div>
+</div>
