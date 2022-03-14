@@ -46,7 +46,6 @@ class RecipesController < ApplicationController
   end
 
   private
-
   def top
   end
 
