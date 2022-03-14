@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_action :set_q, only: [:index, :search]
 
   def index
-    @recipes = Recipe.with_attached_images
+    @recipes = Recipe.with_attached_images.order(created_at: :desc)
   end
 
   def search
@@ -46,7 +46,6 @@ class RecipesController < ApplicationController
   end
 
   private
-
   def top
   end
 
