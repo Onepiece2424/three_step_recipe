@@ -27,7 +27,7 @@
   <div class="comment_block">
   <h2>コメント一覧</h2>
     <div class="comment_main">
-      <% current_user.comments.each do |c| %>
+      <% @comments.each do |c| %>
         <div class="comment_text">
           <%= c.comment_content %>
           <br>
