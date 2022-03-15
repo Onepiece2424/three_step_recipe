@@ -32,7 +32,6 @@
           <%= c.comment_content %>
           <br>
           <%= link_to "Delete a comment", recipe_comment_path(c.recipe.id,c.id), data: {confirm: '本当に削除しますか？'}, method: :delete %>
-          
         </div>
       <% end %>
     </div>
