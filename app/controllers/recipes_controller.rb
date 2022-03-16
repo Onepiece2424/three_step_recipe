@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.with_attached_images.order(created_at: :desc)
+    @my_recipes = Recipe.with_attached_images
   end
 
   def search
