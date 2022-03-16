@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.with_attached_images.order(created_at: :desc)
-    @my_recipes = Recipe.with_attached_images
+    @my_recipes = current_user.recipes
   end
 
   def search
@@ -17,6 +17,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
+    @recipe.user = current_user
     if @recipe.save
       redirect_to recipes_path
     else
