@@ -6,6 +6,10 @@
           <% @recipe.images.each do |image| %>
             <%= image_tag image.variant(resize: "440x220!") %>
           <% end %>
+        <% else %>
+          <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+          <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+          <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
         <% end %>
       </div>
     </div>
