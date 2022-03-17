@@ -14,7 +14,7 @@
     <h3>ALL recipes</h3>
     <div class="container">
       <% @recipes.each do |recipe| %>
-        <%= link_to(recipe_path(recipe), class:"userList") do %>
+        <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
               <% if recipe.images.blank? %>
@@ -28,8 +28,8 @@
                 <%= recipe.title %>
               </div>
               <div class="card__overviewtext">
-                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList" %>
-                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList" %>
+                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark" %>
+                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark" %>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
     <h3>My recipe</h3>
     <div class="container">
       <% @my_recipes.each do |recipe| %>
-        <%= link_to(recipe_path(recipe), class:"userList") do %>
+        <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
               <% if recipe.images.blank? %>
@@ -54,8 +54,8 @@
                 <%= recipe.title %>
               </div>
               <div class="card__overviewtext">
-                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList" %>
-                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList" %>
+                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark" %>
+                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark" %>
               </div>
             </div>
           </div>
