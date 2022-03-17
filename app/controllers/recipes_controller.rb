@@ -9,6 +9,7 @@ class RecipesController < ApplicationController
 
   def search
     @results = @q.result
+    @my_results = @my_q.result
   end
 
   def new
@@ -57,5 +58,6 @@ class RecipesController < ApplicationController
 
   def set_q
     @q = Recipe.ransack(params[:q])
+    @my_q = current_user.recipes.ransack(params[:q])
   end
 end

@@ -29,7 +29,7 @@
     <br>
     <h3>My recipe</h3>
     <div class="container">
-      <% @results.each do |recipe| %>
+      <% @my_results.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
