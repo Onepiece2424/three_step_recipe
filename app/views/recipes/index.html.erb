@@ -25,7 +25,11 @@
             </div>
             <div class="card__textbox">
               <div class="card__titletext">
-                <%= recipe.title %>
+                <% if recipe.title.blank? %>
+                  タイトルなし
+                <% else %>
+                  <%= recipe.title %>
+                <% end %>
               </div>
               <div class="card__overviewtext">
                 <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark" %>
@@ -51,7 +55,11 @@
             </div>
             <div class="card__textbox">
               <div class="card__titletext">
-                <%= recipe.title %>
+                <% if recipe.title.blank? %>
+                  タイトルなし
+                <% else %>
+                  <%= recipe.title %>
+                <% end %>
               </div>
               <div class="card__overviewtext">
                 <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark" %>
