@@ -21,7 +21,8 @@
         <%= form.text_field :process3 %>
       </div>
       <div class="sub_process">
-        <%= form.file_field :images, multiple: true %>
+        <%= form.label :images, "レシピの手順数に合わせて画像を投稿しよう！", class: "image_input_btn" %>
+        <%= form.file_field :images, multiple: true, class: "image_form" %>
       </div>
     </div>
   </div>
