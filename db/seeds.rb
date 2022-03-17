@@ -8,7 +8,7 @@
 
 User.all.each do |user|
   user.recipes.create!(
-    title: 'チャーハン',
+    title: 'ハヤシライス',
     process1: '具材を切る',
     process2: '炒める',
     process3: '味付け'
