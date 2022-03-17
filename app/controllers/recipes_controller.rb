@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:top]
   before_action :set_q, only: [:index, :search]
+  before_action :ensure_user, only: [:edit, :update, :destroy]
 
   def index
     @recipes = Recipe.with_attached_images.order(created_at: :desc).limit(5)
@@ -33,17 +34,17 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
   end
 
   def update
-    @recipe = Recipe.find(params[:id])
-    @recipe.update(recipe_params)
-    redirect_to recipes_path
+    if @recipe.update(recipe_params)
+      redirect_to recipes_path
+    else
+      render :edit
+    end
   end
 
   def destroy
-    @recipe = Recipe.find(params[:id])
     @recipe.destroy
     redirect_to recipes_path
   end
@@ -59,5 +60,11 @@ class RecipesController < ApplicationController
   def set_q
     @q = Recipe.ransack(params[:q])
     @my_q = current_user.recipes.ransack(params[:q])
+  end
+
+  def ensure_user
+    @recipes = current_user.recipes
+    @recipe = @recipes.find_by(id: params[:id])
+    redirect_to recipes_path unless @recipe
   end
 end
