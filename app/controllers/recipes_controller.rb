@@ -4,10 +4,12 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.with_attached_images.order(created_at: :desc)
+    @my_recipes = current_user.recipes
   end
 
   def search
     @results = @q.result
+    @my_results = @my_q.result
   end
 
   def new
@@ -16,6 +18,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
+    @recipe.user = current_user
     if @recipe.save
       redirect_to recipes_path
     else
@@ -55,5 +58,6 @@ class RecipesController < ApplicationController
 
   def set_q
     @q = Recipe.ransack(params[:q])
+    @my_q = current_user.recipes.ransack(params[:q])
   end
 end
