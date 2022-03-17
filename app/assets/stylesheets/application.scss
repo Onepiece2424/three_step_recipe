@@ -241,7 +241,7 @@ cursor: pointer;
 }
 
 .userList{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 //トップページ（recipes/top.html.erb）
@@ -261,7 +261,7 @@ cursor: pointer;
 }
 
 .title_css {
-  text-decoration: none;
+  text-decoration: none !important;
   color: white;
 }
 
