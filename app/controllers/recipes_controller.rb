@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.with_attached_images.order(created_at: :desc).limit(5)
-    @my_recipes = current_user.recipes.limit(5)
+    @my_recipes = current_user.recipes.order(created_at: :desc).limit(5)
   end
 
   def search
