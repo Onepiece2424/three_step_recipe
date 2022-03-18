@@ -14,7 +14,7 @@
     <h3>ALL recipes</h3>
     <div class="container">
       <% @recipes.each do |recipe| %>
-        <%= link_to(recipe_path(recipe), class:"userList") do %>
+        <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
               <% if recipe.images.blank? %>
@@ -25,11 +25,18 @@
             </div>
             <div class="card__textbox">
               <div class="card__titletext">
-                <%= recipe.title %>
+                <% if recipe.title.blank? %>
+                  タイトルなし
+                <% else %>
+                  <%= recipe.title %>
+                <% end %>
               </div>
               <div class="card__overviewtext">
-                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList" %>
-                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList" %>
+                <div class="recipe_username">Username:　<%= recipe.user.username %></div>
+                <div class="recipe_edit_delete_link">
+                  <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark recipe_edit" %>
+                  <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark recipe_delete" %>
+                </div>
               </div>
             </div>
           </div>
@@ -40,7 +47,7 @@
     <h3>My recipe</h3>
     <div class="container">
       <% @my_recipes.each do |recipe| %>
-        <%= link_to(recipe_path(recipe), class:"userList") do %>
+        <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
               <% if recipe.images.blank? %>
@@ -51,11 +58,18 @@
             </div>
             <div class="card__textbox">
               <div class="card__titletext">
-                <%= recipe.title %>
+                <% if recipe.title.blank? %>
+                  タイトルなし
+                <% else %>
+                  <%= recipe.title %>
+                <% end %>
               </div>
               <div class="card__overviewtext">
-                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList" %>
-                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList" %>
+                <div class="recipe_username">Username:　<%= recipe.user.username %></div>
+                <div class="recipe_edit_delete_link">
+                  <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark recipe_edit" %>
+                  <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark recipe_delete" %>
+                </div>
               </div>
             </div>
           </div>
@@ -63,7 +77,7 @@
       <% end %>
     </div>
     <div class="new_recipe">
-      <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get } %>
+      <%= button_to "Create a new recipe", {controller: "recipes", action: "new"}, {method: :get, class: "new_path_button" } %>
     </div>
   </div>
 </div>

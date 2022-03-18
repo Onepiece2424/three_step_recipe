@@ -1,5 +1,5 @@
-<div class="main_page">
-  <div class="main_in_page">
+<div class="main_search_page">
+  <div class="main_in_search_page">
     <h3>ALL recipes</h3>
     <div class="container">
       <% @results.each do |recipe| %>
@@ -28,7 +28,7 @@
     <br>
     <br>
     <h3>My recipe</h3>
-    <div class="container">
+    <div class="container search_my_recipe">
       <% @my_results.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList") do %>
           <div class="card card-skin">
@@ -53,6 +53,6 @@
       <% end %>
     </div>
     <br>
-    <div><%= link_to "トップページへ戻る", recipes_path %></div>
+    <div class="search_top_link"><%= link_to "トップページへ戻る", recipes_path %></div>
   </div>
 </div>

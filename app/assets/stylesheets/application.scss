@@ -9,12 +9,10 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
  */
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
 @import "font-awesome";
 
 body {
@@ -76,10 +74,13 @@ input[type="email"],input[type="password"],input[type="text"] {
 .main_page {
   width: 100%;
   margin: 0;
+  height: auto;
+  background-color:#fdf5e6;
 }
 
 .main_in_page {
   margin: 0 10px;
+  padding-bottom: 10px;
 }
 
 .container {
@@ -91,6 +92,7 @@ input[type="email"],input[type="password"],input[type="text"] {
 .card{
   width: 288px;
   height: auto;
+  margin: 0px 5px;
 }
 
 .card__imgframe{
@@ -130,14 +132,40 @@ input[type="email"],input[type="password"],input[type="text"] {
   box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
 
-.new_recipe {
+.recipe_username {
+  font-size: 15px;
+  margin: 10px 0px;
+  color: #3399FF;
+  padding: 2px 0px;
+}
+
+.recipe_edit_delete_link {
   text-align: center;
-  margin: 100px 600px 35px;
+  font-size: 18px;
+}
+
+.recipe_edit,.recipe_delete {
+  padding: 0px 10px;
+}
+
+.recipe_edit:hover,.recipe_delete:hover {
+  background-color: #99CCFF;
+}
+
+.new_recipe {
+  margin: 50px 100px;
+}
+
+.new_path_button {
+  border-radius: 100vh;
+  width: 100%;
+  padding: 10px 0px;
+  cursor: pointer
 }
 
 .search_form {
   text-align: center;
-  margin: 30px 0px;
+  padding: 10px 0px;
 }
 
 .search_block {
@@ -150,7 +178,7 @@ input[type="email"],input[type="password"],input[type="text"] {
 }
 
 .search_form button[type=submit] {
-font-size: 17px;
+font-size: 22px;
 color: #FFF;
 background: #474747;
 border: 2px solid #474747;
@@ -159,39 +187,75 @@ cursor: pointer;
 }
 
 //recipe/newアクションページ
+.recipe_new_title {
+  font-size: 30px;
+  margin: 18px 50px 5px;
+}
+
 .main {
   text-align: center;
-  margin: 50px 10%;
+  margin: 0px 140px;
   width: 1100px;
+  // background-color: #fdf5e6;
 }
 
 .main_procedure {
-  padding: 30px 0px;
+  padding: 18px 0px;
 }
 
 .sub_process {
-  padding: 30px 0px;
+  padding: 20px 0px;
 }
 
-// .new_button {
-//   padding-top: 80px;
-//   position: fixed;
-// }
+.new_button {
+  padding: 15px 0px;
+}
+
+.btn {
+  border-radius: 100vh;
+  width: 100%;
+  padding: 10px 0px;
+  cursor: pointer
+}
+
+.image_input_btn{
+  display: block;
+  background-color: #228B22;
+  width: 350px;
+  height: 30px;
+  margin: 0px 400px;
+  border-radius: 5px;
+  padding: 4px 2px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.image_form{
+  display: none;
+}
 
 //レシピ詳細ページ
+.recipe_title {
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .main_in_page2 {
   margin: 13px 244px;
   display: flex;
-  // background-color: blueviolet;
 }
 
-// .main_left {
-//   // background-color: #E4A972;
-// }
+.main_left {
+  text-align: center;
+}
 
-// .main_left2 {
-//   padding-right: 30px;
-// }
+.main_left2 {
+  padding: 10px;
+}
 
 .main_right {
   display:flex;
@@ -209,7 +273,8 @@ cursor: pointer;
 
 //コメント部分
 .comment_block {
-  margin: 100px 244px;
+  margin: 100px 244px 0px;
+  padding: 20px 0px;
 }
 
 .comment_main {
@@ -243,13 +308,13 @@ cursor: pointer;
 }
 
 .userList{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 //トップページ（recipes/top.html.erb）
 .main_background {
   background-image: url("/images/black-bean-close-up-cooked-16407741.png");
-  height: 700px;
+  height: 720px;
   width: 100%;
   margin: 0;
   background-size: cover;
@@ -263,7 +328,7 @@ cursor: pointer;
 }
 
 .title_css {
-  text-decoration: none;
+  text-decoration: none !important;
   color: white;
 }
 
@@ -307,4 +372,17 @@ cursor: pointer;
   height: 40px;
   padding-top: 10px;
   text-align: center;
+}
+
+//検索結果表示ページ
+.main_search_page {
+  width: 100%;
+  margin: 0;
+  height: 740px;
+  background-color:#fdf5e6;
+}
+
+.main_in_search_page {
+  margin: 0 10px;
+  padding: 10px 0px;
 }

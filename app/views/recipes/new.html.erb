@@ -1,5 +1,4 @@
-<h3>Create a new recipe</h3>
-
+<div class="recipe_new_title">Create a new recipe</div>
 <div class="main">
   <%= form_with model: @recipe do |form| %>
   <div class="flexbox">
@@ -21,12 +20,14 @@
         <%= form.text_field :process3 %>
       </div>
       <div class="sub_process">
-        <%= form.file_field :images, multiple: true %>
+        <%= form.label :images, 'レシピの手順数に合わせて画像を投稿しよう！' %>
+        <%= form.label :images, 'レシピ画像を選択してください。', class: "image_input_btn" %>
+        <%= form.file_field :images, multiple: true, class: "image_form" %>
+      </div>
+      <div class="new_button">
+        <%= form.submit :class=>"btn" %>
       </div>
     </div>
-  </div>
-  <div class="new_button">
-    <%= form.submit %>
   </div>
   <% end %>
 </div>
