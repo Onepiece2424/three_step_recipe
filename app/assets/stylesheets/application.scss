@@ -128,6 +128,27 @@ input[type="email"],input[type="password"],input[type="text"] {
   box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
 
+.recipe_username {
+  font-size: 15px;
+  margin: 10px 0px;
+  color: #3399FF;
+  padding: 2px 0px;
+}
+
+.recipe_edit_delete_link {
+  text-align: center;
+  font-size: 18px;
+}
+
+.recipe_edit,.recipe_delete {
+  padding: 0px 10px;
+}
+
+.recipe_edit:hover,.recipe_delete:hover {
+  // background-color: #ffc9d7;
+  background-color: #99CCFF;
+}
+
 .new_recipe {
   margin: 30px 100px;
 }
