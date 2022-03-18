@@ -65,8 +65,11 @@
                 <% end %>
               </div>
               <div class="card__overviewtext">
-                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark" %>
-                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark" %>
+                <div class="recipe_username">Username:　<%= recipe.user.username %></div>
+                <div class="recipe_edit_delete_link">
+                  <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark recipe_edit" %>
+                  <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark recipe_delete" %>
+                </div>
               </div>
             </div>
           </div>
