@@ -233,6 +233,13 @@ cursor: pointer;
 }
 
 //レシピ詳細ページ
+.recipe_title {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .main_in_page2 {
   margin: 13px 244px;
   display: flex;
