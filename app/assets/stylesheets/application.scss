@@ -74,6 +74,7 @@ input[type="email"],input[type="password"],input[type="text"] {
 .main_page {
   width: 100%;
   margin: 0;
+  height: 950px;
   background-color:#fdf5e6;
 }
 
@@ -236,7 +237,7 @@ cursor: pointer;
 //レシピ詳細ページ
 .recipe_title {
   text-align: center;
-  margin: 10px 0px;
+  padding: 10px 0px;
   font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -270,7 +271,8 @@ cursor: pointer;
 
 //コメント部分
 .comment_block {
-  margin: 100px 244px;
+  margin: 100px 244px 0px;
+  padding: 20px 0px;
 }
 
 .comment_main {
