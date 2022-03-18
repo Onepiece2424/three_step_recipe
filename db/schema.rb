@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_16_224009) do
+ActiveRecord::Schema.define(version: 2022_03_18_110255) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -84,8 +84,10 @@ ActiveRecord::Schema.define(version: 2022_03_16_224009) do
     t.string "provider"
     t.string "uid"
     t.string "username"
+    t.integer "recipe_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["recipe_id"], name: "index_users_on_recipe_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
@@ -95,4 +97,5 @@ ActiveRecord::Schema.define(version: 2022_03_16_224009) do
   add_foreign_key "comments", "recipes"
   add_foreign_key "comments", "users"
   add_foreign_key "recipes", "users"
+  add_foreign_key "users", "recipes"
 end
