@@ -1,5 +1,6 @@
 <div class="main_page">
   <div class="main_in_page">
+  <%= notice %>
     <div class="search_form">
       <%= search_form_for @q, url: search_recipes_path do |f| %>
         <%= f.label :title_cont, 'キーワード検索' %>
