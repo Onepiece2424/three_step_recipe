@@ -4,8 +4,8 @@ class RecipesController < ApplicationController
   before_action :ensure_user, only: [:edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.with_attached_images.order(created_at: :desc).limit(5)
-    @my_recipes = current_user.recipes.order(created_at: :desc).limit(5)
+    @recipes = Recipe.with_attached_images.order(:updated_at,:created_at).reverse_order.limit(5)
+    @my_recipes = current_user.recipes.order(:updated_at,:created_at).reverse_order.limit(5)
   end
 
   def search

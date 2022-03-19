@@ -1,17 +1,59 @@
 <div class="main_page">
+  <h3>My plofile</h3>
   <div class="mypage_main">
     <div class="my_image">
       <div class="circle"></div>
     </div>
     <div class="name_follow">
       <div class="my_name">
-        <p><%= current_user.username %></p>
-        <p><%= current_user.email %></p>
+        <p>ユーザー名：<%= current_user.username %></p>
+        <p>アドレス：<%= current_user.email %></p>
+        <p>レシピ投稿数：<%= current_user.recipes.count %></p>
+        <p>お気に入りしたレシピの数：<%= @favorite_recipes.count %></p>
       </div>
-      <div class="my_follow">
-      FOLLOW
-      </div>
+      <div class="my_follow">FOLLOW</div>
     </div>
+  </div>
+  <h3>My favorite recipes</h3>
+  <div class="container">
+    <% @favorite_recipes.each do |recipe| %>
+      <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
+        <div class="card card-skin">
+          <div class="card__imgframe">
+            <% if recipe.images.blank? %>
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '303x178' %>
+            <% else %>
+              <%= image_tag recipe.images[0], size: '303x178' %>
+            <% end %>
+          </div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              <% if recipe.title.blank? %>
+                タイトルなし
+              <% else %>
+                <%= recipe.title %>
+              <% end %>
+            </div>
+            <div class="card__overviewtext">
+              <div class="recipe_username">Username:　<%= recipe.user.username %></div>
+              <div class="recipe_edit_delete_link">
+                <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark recipe_edit" %>
+                <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark recipe_delete" %>
+              </div>
+            </div>
+            <% if user_signed_in? %>
+              <% if recipe.favorited_by?(current_user) %>
+                <p><span>お気に入り解除: </span><%=link_to recipe.favorites.count, recipe_favorites_path(recipe.id), method: :delete %></p>
+              <% else %>
+                <p><span>お気に入り登録: </span><%=link_to recipe.favorites.count, recipe_favorites_path(recipe.id), method: :post %></p>
+              <% end %>
+            <% else %>
+              <p><span>お気に入り数: </span><%= recipe.favorites.count %></p>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
   <div class="top_back_button">
     <%= link_to  recipes_path, class: 'btn btn-default' do %>

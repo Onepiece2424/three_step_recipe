@@ -343,7 +343,7 @@ cursor: pointer;
   width: 50%;
   height: 600px;
   text-align: center;
-  margin: 25px 0px;
+  margin: 25px 50px;
 }
 
 .name_follow {
@@ -357,6 +357,7 @@ cursor: pointer;
   height: 600px;
   border-radius: 50%;
   background-image: url("/images/マスクグループ 1.png");
+  margin: 0px 35px;
 }
 
 .my_name {
@@ -370,8 +371,14 @@ cursor: pointer;
 .top_back_button {
   width: 100%;
   height: 40px;
-  padding-top: 10px;
+  margin-top: 10px;
   text-align: center;
+}
+
+h3 {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0px;
 }
 
 //検索結果表示ページ
