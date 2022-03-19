@@ -18,9 +18,9 @@
       <span>トップページへ戻る</span>
     <% end %>
   </div>
-  <h3>ALL recipes</h3>
+  <h3>My favorite recipes</h3>
   <div class="container">
-    <% @recipes.each do |recipe| %>
+    <% @favorite_recipes.each do |recipe| %>
       <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
         <div class="card card-skin">
           <div class="card__imgframe">
