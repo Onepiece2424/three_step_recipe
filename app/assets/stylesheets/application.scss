@@ -51,6 +51,7 @@ header h1 {
   width: 1.75rem;
   height: 1.5rem;
 }
+
 .nav_toggle i {
   display: block;
   width: 100%;
@@ -59,14 +60,17 @@ header h1 {
   position: absolute;
   transition: transform .5s, opacity .5s;
 }
+
 .nav_toggle i:nth-child(1) {
   top: 0;
 }
+
 .nav_toggle i:nth-child(2) {
   top: 0;
   bottom: 0;
   margin: auto;
 }
+
 .nav_toggle i:nth-child(3) {
   bottom: 0;
 }
@@ -74,9 +78,11 @@ header h1 {
 .nav_toggle.show i:nth-child(1) {
   transform: translateY(10px) rotate(-45deg);
 }
+
 .nav_toggle.show i:nth-child(2) {
   opacity: 0;
 }
+
 .nav_toggle.show i:nth-child(3) {
   transform: translateY(-12px) rotate(45deg);
 }
