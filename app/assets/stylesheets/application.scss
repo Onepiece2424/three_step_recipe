@@ -18,6 +18,7 @@
 body {
   width: 100%;
   margin: 0px auto;
+  background-color:#fdf5e6;
 }
 
 //ヘッダー
@@ -476,3 +477,11 @@ h3 {
   margin: 0 10px;
   padding: 10px 0px;
 }
+
+.back-to-top {
+  right: 0;
+  // display: block;
+  text-align: right;
+  width: 50%;
+}
+
