@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @recipes = Recipe.with_attached_images.order(created_at: :desc)
-    @favorite_recipes = @user.favorite_recipes
+    @favorite_recipes = @user.favorite_recipes.order(created_at: :desc)
   end
 end
