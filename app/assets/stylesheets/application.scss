@@ -171,6 +171,10 @@ input[type="email"],input[type="password"],input[type="text"] {
   margin: 0px 5px;
 }
 
+.card:hover {
+  opacity: 0.8;
+}
+
 .card__imgframe{
   width: 100%;
   height: auto;
