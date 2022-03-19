@@ -40,12 +40,65 @@ header h1 {
   color: black;
 }
 
+//ハンバーガーメニュー
+.nav_toggle {
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.5rem;
+}
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+.nav_toggle i:nth-child(1) {
+  top: 0;
+}
+.nav_toggle i:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.nav_toggle i:nth-child(3) {
+  bottom: 0;
+}
+
+.nav_toggle.show i:nth-child(1) {
+  transform: translateY(10px) rotate(-45deg);
+}
+.nav_toggle.show i:nth-child(2) {
+  opacity: 0;
+}
+.nav_toggle.show i:nth-child(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+.nav {
+  position: fixed;
+  top: 3rem;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+}
+
+.nav.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 //ユーザー新規登録画面
-// .signup {
-//   padding-top: 30px;
-//   width: 100%;
-//   text-align: center;
-// }
+.signup {
+  padding-top: 30px;
+  width: 100%;
+  text-align: center;
+}
 
 .log {
   padding-top: 90px;
@@ -196,7 +249,6 @@ cursor: pointer;
   text-align: center;
   margin: 0px 140px;
   width: 1100px;
-  // background-color: #fdf5e6;
 }
 
 .main_procedure {
@@ -281,10 +333,10 @@ cursor: pointer;
   padding: 0.5em 1em;
   margin: 2em 0;
   font-weight: bold;
-  color: #6091d3;/*文字色*/
+  color: #6091d3;
   background: #FFF;
-  border: solid 3px #6091d3;/*線*/
-  border-radius: 10px;/*角の丸み*/
+  border: solid 3px #6091d3;
+  border-radius: 10px;
 }
 
 .comment_text {
@@ -392,57 +444,4 @@ h3 {
 .main_in_search_page {
   margin: 0 10px;
   padding: 10px 0px;
-}
-
-//ハンバーガーメニュー
-.nav_toggle {
-  display: block;
-  position: relative;
-  width: 1.75rem;
-  height: 1.5rem;
-}
-.nav_toggle i {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #333;
-  position: absolute;
-  transition: transform .5s, opacity .5s;
-}
-.nav_toggle i:nth-child(1) {
-  top: 0;
-}
-.nav_toggle i:nth-child(2) {
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-.nav_toggle i:nth-child(3) {
-  bottom: 0;
-}
-
-.nav_toggle.show i:nth-child(1) {
-  transform: translateY(10px) rotate(-45deg);
-}
-.nav_toggle.show i:nth-child(2) {
-  opacity: 0;
-}
-.nav_toggle.show i:nth-child(3) {
-  transform: translateY(-12px) rotate(45deg);
-}
-
-.nav {
-  position: fixed;
-  top: 3rem;
-  right: 0;
-  bottom: 0;
-  padding: 1rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .5s, visibility .5s;
-}
-
-.nav.show {
-  opacity: 1;
-  visibility: visible;
 }
