@@ -106,6 +106,16 @@ header h1 {
 ul {
   list-style:none
 }
+
+li.nav_menu_li {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+li.nav_menu_li:hover {
+  opacity: 0.4;
+}
+
 //ユーザー新規登録画面
 .signup {
   padding-top: 30px;
