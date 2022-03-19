@@ -5,12 +5,11 @@
     </div>
     <div class="name_follow">
       <div class="my_name">
-        <p><%= current_user.username %></p>
-        <p><%= current_user.email %></p>
+        <p>ユーザー名：<%= current_user.username %></p>
+        <p>アドレス：<%= current_user.email %></p>
+        <p>レシピ投稿数：<%= current_user.recipes.count %></p>
       </div>
-      <div class="my_follow">
-      FOLLOW
-      </div>
+      <div class="my_follow">FOLLOW</div>
     </div>
   </div>
   <div class="top_back_button">
