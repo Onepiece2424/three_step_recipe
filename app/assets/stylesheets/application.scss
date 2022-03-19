@@ -163,13 +163,16 @@ input[type="email"],input[type="password"],input[type="text"] {
 .container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+
 }
 
 //カードデザイン
-.card{
-  width: 288px;
+.card {
+  width: 210px;
   height: auto;
-  margin: 0px 5px;
+  margin: 5px 5px;
+  flex-wrap: wrap;
 }
 
 .card:hover {
