@@ -8,12 +8,13 @@
     <li class="nav_menu_li"><%= link_to 'サインアップ', new_user_registration_path, class:"userList text-dark" %></li>
     <li class="nav_menu_li"><%= link_to 'ログイン', new_user_session_path, class:"userList text-dark" %></li>
     <li class="nav_menu_li"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"userList text-dark" %></li>
+    <li class="nav_menu_li"><%= link_to 'メインページ', recipes_path, class:"userList text-dark" %></li>
+    <li class="nav_menu_li"><%= link_to 'レシピ投稿ページ', new_recipe_path, class:"userList text-dark" %></li>
     <li class="nav_menu_li">
       <% if user_signed_in? %>
         <%= link_to 'マイページ', user_path(current_user.id), class:"userList text-dark" %>
       <% end %>
     </li>
-    <li class="nav_menu_li"><%= link_to 'メインページ', recipes_path, class:"userList text-dark" %></li>
   </ul>
 </nav>
 <script type="text/javascript">
