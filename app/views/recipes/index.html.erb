@@ -116,11 +116,9 @@
     <br>
     <br>
     <h3>Favorite recipe's ranking</h3>
-    <div class="carousel">
-    <ul class="carousel-area">
+    <div class="container">
       <% @all_ranks.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
-    <li class="carousel-list">
           <div class="card card-skin">
             <div class="card__imgframe">
               <% if recipe.images.blank? %>
@@ -155,21 +153,11 @@
               <% end %>
             </div>
           </div>
-          </li>
         <% end %>
       <% end %>
-    </ul>
     </div>
     <br>
     <br>
-    <div class="arow-wrap">
-        <div class="arrow-left">
-          <button class="arrow-btn js-btn-back" type="button"></button>
-        </div>
-        <div class="arrow-right">
-          <button class="arrow-btn js-btn-next" type="button"></button>
-        </div>
-    </div>
     <br>
     <br>
     <div class="new_recipe">
