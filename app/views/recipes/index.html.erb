@@ -117,6 +117,7 @@
     <br>
     <h3>Favorite recipe's ranking</h3>
     <div class="container">
+    <div class="favorite_main_content">
       <% @all_ranks.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
           <div class="card card-skin">
@@ -155,6 +156,7 @@
           </div>
         <% end %>
       <% end %>
+    </div>
     </div>
     <br>
     <br>

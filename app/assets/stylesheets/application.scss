@@ -162,8 +162,12 @@ input[type="email"],input[type="password"],input[type="text"] {
 }
 
 .container {
+  text-align: center;
+  padding: 0px 20px;
+}
+
+.favorite_main_content {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
