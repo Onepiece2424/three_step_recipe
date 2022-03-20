@@ -522,11 +522,21 @@ button {
 
 .sub_image {
   background-image: url("/images/black-bean-close-up-cooked-16407741.png");
-  height: 720px;
+  height: 760px;
   width: 100%;
   margin: 0;
-  opacity: 0.4;
+  // opacity: 0.4;
   background-size: cover;
+}
+
+.main_explain {
+  text-align: center;
+  // margin: 0px 200px;
+  padding: 250px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  color: #0000BB;
+  background-color: rgba(255, 255, 255, 0.562);
 }
 
 //マイページ
