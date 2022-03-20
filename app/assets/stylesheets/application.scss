@@ -304,49 +304,10 @@ button {
 // /* object-fitを使用せずに画像トリミングさせるためにbackgroundで指定 */
 .carousel-list {
   height: 100%;
-  // margin-right: 30px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-// @media screen and (max-width: 600px) {
-//   .carousel {
-//     width: 300px;
-//     height: calc(300px * 0.5625);
-//   }
-//   .carousel-list {
-//     width: 300px;
-//     height: calc(300px * 0.5625);
-//     margin-right: 0;
-//   }
-// }
-// .carousel-list:nth-child(1) {
-//   background-image: url(./img/hamster.jpg);
-// }
-// .carousel-list:nth-child(2) {
-//   background-image: url(./img/sheep.jpg);
-// }
-// .carousel-list:nth-child(3) {
-//   background-image: url(./img/turtle.jpg);
-// }
-// .carousel-list:nth-child(4) {
-//   background-image: url(./img/bird.jpg);
-// }
-// .carousel-list:nth-child(5) {
-//   background-image: url(./img/lion.jpg);
-// }
-// /* clipで非表示指定（スクリーンリーダー対策） */
-// .carousel-img {
-//   width: 1px;
-//   height: 1px;
-//   clip: rect(1px, 1px, 1px, 1px);
-//   -webkit-clip-path: inset(50%);
-//   clip-path: inset(50%);
-//   margin: -1px;
-//   padding: 0;
-//   overflow: hidden;
-//   position: absolute;
-// }
 // /*********** スライド送りボタン ***********/
 // /* 共有パーツ */
 .arow-wrap {
