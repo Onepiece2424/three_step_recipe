@@ -496,14 +496,34 @@ button {
 
 .main_title {
   text-align: center;
-  padding: 200px 0px;
+  padding: 200px 0px 50px;
   font-size: 100px;
   font-weight: bold;
 }
 
+.sub_title {
+  text-align: center;
+  color: #0000BB;
+  font-size: 23px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .title_css {
   text-decoration: none !important;
-  color: white;
+  color: #0000BB;
+}
+
+.title_css:hover {
+  color: antiquewhite;
+}
+
+.sub_image {
+  background-image: url("/images/black-bean-close-up-cooked-16407741.png");
+  height: 720px;
+  width: 100%;
+  margin: 0;
+  opacity: 0.4;
+  background-size: cover;
 }
 
 //マイページ
