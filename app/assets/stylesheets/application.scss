@@ -503,7 +503,9 @@ button {
 
 .sub_title {
   text-align: center;
+  margin: 0px 300px;
   color: #0000BB;
+  background-color: rgba(255, 255, 255, 0.562);
   font-size: 23px;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -511,6 +513,7 @@ button {
 .title_css {
   text-decoration: none !important;
   color: #0000BB;
+  background-color: rgba(255, 255, 255, 0.562);
 }
 
 .title_css:hover {
