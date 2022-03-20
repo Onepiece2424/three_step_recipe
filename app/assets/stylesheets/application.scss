@@ -288,8 +288,7 @@ button {
 
 // /*********** ここまでベースCSS・リセットCSS ***********/
 .carousel {
-  width: 1125px;
-  // width: 600px;
+  width: 1290px;
   height: calc(600px * 0.5625);
   position: relative;
   margin: 0 auto;
@@ -304,7 +303,6 @@ button {
 }
 // /* object-fitを使用せずに画像トリミングさせるためにbackgroundで指定 */
 .carousel-list {
-  // width: 600px;
   height: 100%;
   // margin-right: 30px;
   background-size: cover;
