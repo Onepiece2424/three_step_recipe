@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.with_attached_images.order(:updated_at,:created_at).reverse_order
     @my_recipes = current_user.recipes.order(:updated_at,:created_at).reverse_order
+    @all_ranks = Recipe.find(Favorite.group(:recipe_id).order('count(recipe_id) desc').pluck(:recipe_id))
   end
 
   def search
