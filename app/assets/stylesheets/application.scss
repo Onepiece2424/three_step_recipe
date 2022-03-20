@@ -361,13 +361,6 @@ button {
   left: 50%;
   transform: translate(-70%, -50%)rotate(135deg);
 }
-@media screen and (max-width: 600px) {
-  .arrow-btn {
-    width: 30px;
-    height: 30px;
-  }
-}
-
 //recipe/newアクションページ
 .recipe_new_title {
   font-size: 30px;
