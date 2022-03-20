@@ -36,12 +36,15 @@ header h1 {
 }
 
 //ログイン＆ユーザー登録ボタン
-.login {
+h2 {
+  text-align: center;
+}
+.hamburger_menu {
   position:absolute; top:20px; right:25px;
   color: black;
 }
 
-.login:hover {
+.hamburger_menu:hover {
   cursor: pointer;
 }
 
