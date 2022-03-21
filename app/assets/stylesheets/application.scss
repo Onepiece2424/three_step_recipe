@@ -129,6 +129,11 @@ li.nav_menu_li:hover {
 }
 
 //ユーザー新規登録画面
+.main_signup_page {
+  margin: 10 10px;
+  padding: 20px 0px;
+}
+
 .signup {
   padding: 30px 60px;
   width: 100%;
@@ -136,7 +141,7 @@ li.nav_menu_li:hover {
 }
 
 .log {
-  padding-top: 90px;
+  margin: 20px;
 }
 
 input[type="email"],input[type="password"],input[type="text"] {
@@ -149,8 +154,8 @@ input[type="email"],input[type="password"],input[type="text"] {
   padding-bottom: 50px;
 }
 
-.actions {
-  padding-top: 50px;
+.login_link_signup_button {
+  padding: 30px 0px 5px;
 }
 
 //パスワードはお忘れですかボタン
