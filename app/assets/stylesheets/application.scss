@@ -446,31 +446,34 @@ button {
 }
 
 .main_in_page2 {
-  margin: 13px 244px;
-  display: flex;
+  // margin: 13px 244px;
+  // display: flex;
 }
 
 .main_left {
   text-align: center;
+  background-color: #0000BB;
+  width: 50%;
 }
 
-.main_left2 {
-  padding: 10px;
-}
+// .main_left2 {
+//   padding: 10px;
+// }
 
 .main_right {
-  display:flex;
-  flex-flow: column;
-  height: 678px;
-  width: 100%;
-  padding: 0px 50px;
+  // display:flex;
+  // flex-flow: column;
+  // height: 678px;
+  width: 50%;
+  // padding: 0px 50px;
+  background-color: #228B22;
 }
 
-.process_block {
-  padding:1em;
-  margin:0.5em auto;
-  height: 226px;
-}
+// .process_block {
+//   padding:1em;
+//   margin:0.5em auto;
+//   height: 226px;
+// }
 
 //コメント部分
 .comment_block {
