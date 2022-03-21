@@ -2,7 +2,7 @@
   <div class="main_in_search_page">
   <%= notice %>
     <h3>ALL recipes</h3>
-    <div class="container">
+    <div class="favorite_block">
       <% @results.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
           <div class="card card-skin">
@@ -44,7 +44,7 @@
     </div>
     <br>
     <h3>My recipe</h3>
-    <div class="container">
+    <div class="favorite_block">
       <% @my_results.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
           <div class="card card-skin">

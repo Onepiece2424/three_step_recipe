@@ -176,9 +176,10 @@ input[type="email"],input[type="password"],input[type="text"] {
   padding-bottom: 10px;
 }
 
-.container {
+.favorite_block {
   text-align: center;
   padding: 0px 20px;
+  display: flex;
 }
 
 .my_recipe_container {
