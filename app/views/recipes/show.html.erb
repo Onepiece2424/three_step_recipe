@@ -6,12 +6,20 @@
         <div class="main_left2">
           <% if @recipe.images.attached? %>
             <% @recipe.images.each do |image| %>
+            <div class="image_content">
               <%= image_tag image.variant(resize: "440x220!") %>
+            </div>
             <% end %>
           <% else %>
+          <div class="image_content">
             <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+          </div>
+          <div class="image_content">
             <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+          </div>
+          <div class="image_content">
             <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+          </div>
           <% end %>
         </div>
       </div>

@@ -452,8 +452,11 @@ button {
 
 .main_left {
   text-align: center;
-  background-color: #0000BB;
   width: 50%;
+}
+
+.image_content {
+  margin: 15px 0px;
 }
 
 // .main_left2 {
@@ -466,14 +469,17 @@ button {
   // height: 678px;
   width: 50%;
   // padding: 0px 50px;
-  background-color: #228B22;
+  // background-color: #228B22;
 }
 
-// .process_block {
-//   padding:1em;
-//   margin:0.5em auto;
-//   height: 226px;
-// }
+.process_block {
+  // padding:1em;
+  padding: 70px 0px;
+  margin:0.5em auto;
+  height: 226px;
+  // background-color: #E4A972;
+  text-align: center;
+}
 
 //コメント部分
 .comment_block {
