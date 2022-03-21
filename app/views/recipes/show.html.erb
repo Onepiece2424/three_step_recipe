@@ -7,7 +7,7 @@
           <% if @recipe.images.attached? %>
             <% @recipe.images.each do |image| %>
             <div class="image_content">
-              <%= image_tag image.variant(resize: "440x220!") %>
+              <%= image_tag image.variant(resize: "440x220!"), class: "img" %>
             </div>
             <% end %>
           <% else %>

@@ -445,11 +445,6 @@ button {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.main_in_page2 {
-  // margin: 13px 244px;
-  // display: flex;
-}
-
 .main_left {
   text-align: center;
   width: 50%;
@@ -459,25 +454,20 @@ button {
   margin: 15px 0px;
 }
 
-// .main_left2 {
-//   padding: 10px;
-// }
+.img {
+  width: 90%;
+  height: auto;
+}
 
 .main_right {
-  // display:flex;
-  // flex-flow: column;
-  // height: 678px;
   width: 50%;
-  // padding: 0px 50px;
-  // background-color: #228B22;
 }
 
 .process_block {
-  // padding:1em;
+  width: 90%;
   padding: 70px 0px;
   margin:0.5em auto;
-  height: 226px;
-  // background-color: #E4A972;
+  height: auto;
   text-align: center;
 }
 
