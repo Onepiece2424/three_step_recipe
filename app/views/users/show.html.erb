@@ -15,7 +15,7 @@
     </div>
   </div>
   <h3>My favorite recipes</h3>
-  <div class="container">
+  <div class="my_recipe_container">
     <% @favorite_recipes.each do |recipe| %>
       <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
         <div class="card card-skin">
@@ -60,8 +60,5 @@
       <i class="fa fa-arrow-left"></i>
       <span>トップページへ戻る</span>
     <% end %>
-  </div>
-  <div class="search_top_link">
-    <%= link_to "トップページへ戻る", recipes_path %>
   </div>
 </div>
