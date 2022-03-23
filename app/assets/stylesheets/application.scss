@@ -167,6 +167,7 @@ input[type="email"],input[type="password"],input[type="text"] {
 .main_page {
   width: 100%;
   margin: 0;
+  text-align: center;
   height: auto;
   background-color:#fdf5e6;
 }
@@ -180,22 +181,26 @@ input[type="email"],input[type="password"],input[type="text"] {
   margin: 0px 150px;
 }
 
-.my_recipe_container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px 150px;
-}
-
 .favorite_main_content {
   display: flex;
   flex-wrap: wrap;
+}
+
+.my_recipe_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 3%;
+}
+
+.my_recipe_title {
+  margin: 0px auto;
 }
 
 //カードデザイン
 .card {
   width: 210px;
   height: auto;
-  margin: 5px 5px;
+  margin: 5px auto;
 }
 
 .card:hover {
