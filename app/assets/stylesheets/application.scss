@@ -17,8 +17,18 @@
 
 body {
   width: 100%;
-  margin: 0px auto;
+  margin: 0px;
   background-color:#fdf5e6;
+}
+
+.hwrapper{
+  width: 100%;
+  background-color: #FDE9FB;
+}
+
+.header{
+  max-width: 800px;
+  padding: 10px;
 }
 
 //ヘッダー
@@ -278,6 +288,7 @@ input[type="email"],input[type="password"],input[type="text"] {
 .search_form {
   text-align: center;
   padding: 10px 0px;
+  margin: 0px auto;
 }
 
 .search_block {

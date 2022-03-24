@@ -12,12 +12,14 @@
   </head>
 
   <body>
-    <header>
-      <h1><%= link_to "3 step recipes", recipes_path, class:"userList text-white" %></h1>
-      <div class="hamburger_menu">
-        <%= render "shared/login" %>
+    <div class="hwrapper">
+      <div class="header">
+        <h1><%= link_to "3 step recipes", recipes_path, class:"userList text-white" %></h1>
+        <div class="hamburger_menu">
+          <%= render "shared/login" %>
+        </div>
       </div>
-    </header>
+    </div>
     <%= yield %>
     <a href="#" class="back-to-top">▲</a>
     <%= javascript_pack_tag 'recipe/index' %>
