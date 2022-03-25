@@ -402,6 +402,7 @@ button {
   left: 50%;
   transform: translate(-70%, -50%)rotate(135deg);
 }
+
 //recipe/newアクションページ
 .recipe_new_title {
   font-size: 30px;
@@ -436,14 +437,14 @@ button {
 .image_input_btn{
   display: block;
   background-color: #228B22;
-  width: 350px;
+  // width: 350px;
   height: 30px;
-  margin: 0px 400px;
+  // margin: 0px 400px;
   border-radius: 5px;
   padding: 4px 2px;
   color: white;
   text-decoration: none;
-  text-align: center;
+  // text-align: center;
   cursor: pointer;
 }
 
