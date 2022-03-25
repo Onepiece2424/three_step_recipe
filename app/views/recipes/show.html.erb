@@ -3,23 +3,23 @@
   <div class="container">
     <div class="row">
       <div class="main_left col-md-6">
-        <div class="main_left2">
+        <div class="image_contents">
           <% if @recipe.images.attached? %>
             <% @recipe.images.each do |image| %>
-            <div class="image_content">
+            <div class="image_content_block">
               <%= image_tag image.variant(resize: "440x220!"), class: "img" %>
             </div>
             <% end %>
           <% else %>
-          <div class="image_content">
-            <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
-          </div>
-          <div class="image_content">
-            <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
-          </div>
-          <div class="image_content">
-            <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
-          </div>
+            <div class="image_content_block">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
+            <div class="image_content">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
+            <div class="image_content">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
           <% end %>
         </div>
       </div>

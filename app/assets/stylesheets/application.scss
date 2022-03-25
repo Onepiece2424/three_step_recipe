@@ -456,7 +456,7 @@ button {
   width: 50%;
 }
 
-.image_content {
+.image_content_block {
   margin: 50px 0px;
 }
 
@@ -477,39 +477,39 @@ button {
   text-align: center;
 }
 
-@media (min-width: 375px) {
-  /* ウインドウ幅375px以上の時に適用されるスタイル */
-  .process_block {
-    margin: 30px 0px;
-  }
-  .main_right {
-    padding: 30px 0px;
-  }
-}
+// @media (min-width: 375px) {
+//   /* ウインドウ幅375px以上の時に適用されるスタイル */
+//   .process_block {
+//     margin: 30px 0px;
+//   }
+//   .main_right {
+//     padding: 30px 0px;
+//   }
+// }
 
-@media (min-width: 575px) {
-  /* ウインドウ幅575px以上の時に適用されるスタイル */
-  .process_block {
-    padding: 30px 0px;
-  }
-}
+// @media (min-width: 575px) {
+//   /* ウインドウ幅575px以上の時に適用されるスタイル */
+//   .process_block {
+//     padding: 30px 0px;
+//   }
+// }
 
-@media (min-width: 768px) {
-  /* ウインドウ幅768px以上の時に適用されるスタイル */
-  .process_block {
-    padding: 40px 0px;
-  }
-}
+// @media (min-width: 768px) {
+//   /* ウインドウ幅768px以上の時に適用されるスタイル */
+//   .process_block {
+//     padding: 40px 0px;
+//   }
+// }
 
-@media (min-width: 992px) {
-  /* ウインドウ幅992px以上の時に適用されるスタイル */
-  .process_block {
-    padding: 60px 0px;
-  }
-  .comment_block {
-    margin: 100px 244px 0px;
-  }
-}
+// @media (min-width: 992px) {
+//   /* ウインドウ幅992px以上の時に適用されるスタイル */
+//   .process_block {
+//     padding: 60px 0px;
+//   }
+//   .comment_block {
+//     margin: 100px 244px 0px;
+//   }
+// }
 
 //コメント部分
 .comment_block {
