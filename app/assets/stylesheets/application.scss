@@ -199,11 +199,15 @@ input[type="email"],input[type="password"],input[type="text"] {
 .my_recipe_container {
   display: flex;
   flex-wrap: wrap;
-  margin: 0px auto;
+  margin: 0px 30px;
 }
 
 .my_recipe_title {
   margin: 0px auto;
+}
+
+.card_contents {
+  padding: 0 8.5%;
 }
 
 //カードデザイン
