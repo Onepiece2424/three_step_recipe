@@ -4,6 +4,8 @@
     <div class="my_image col-xs-12 col-md-6">
       <% if current_user.avatar.attached? %>
         <%= image_tag current_user.avatar,class: 'sized' %>
+      <% else %>
+        <%= image_tag 'noimage.jpg', class: 'sized' %>
       <% end %>
     </div>
     <div class="name_follow my_name col-xs-12 col-md-6">
