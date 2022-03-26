@@ -1,20 +1,16 @@
 <div class="main_page">
   <h3>My plofile</h3>
-  <div class="mypage_main">
-    <div class="my_image">
-      <div class="circle">
-        <% if current_user.avatar.attached? %>
-          <%= image_tag current_user.avatar %>
-        <% end %>
-      </div>
+  <div class="row my_page_main">
+    <div class="my_image col-xs-12 col-md-6">
+      <% if current_user.avatar.attached? %>
+        <%= image_tag current_user.avatar,class: 'sized' %>
+      <% end %>
     </div>
-    <div class="name_follow">
-      <div class="my_name">
-        <p>ユーザー名：<%= current_user.username %></p>
-        <p>アドレス：<%= current_user.email %></p>
-        <p>レシピ投稿数：<%= current_user.recipes.count %></p>
-        <p>お気に入りしたレシピの数：<%= @favorite_recipes.count %></p>
-      </div>
+    <div class="name_follow my_name col-xs-12 col-md-6">
+      <p>ユーザー名：<%= current_user.username %></p>
+      <p>アドレス：<%= current_user.email %></p>
+      <p>レシピ投稿数：<%= current_user.recipes.count %></p>
+      <p>お気に入りしたレシピの数：<%= @favorite_recipes.count %></p>
       <div class="my_follow">FOLLOW</div>
     </div>
   </div>

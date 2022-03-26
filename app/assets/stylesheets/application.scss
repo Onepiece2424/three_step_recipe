@@ -619,21 +619,21 @@ button {
 }
 
 //マイページ
-.mypage_main {
+.my_page_main {
   margin: 0 10px;
-  display: flex;
-  height: 650px;
+  // display: flex;
+  // height: 650px;
 }
 
 .my_image {
-  width: 50%;
-  height: 600px;
+  // width: 50%;
+  // height: 600px;
   text-align: center;
-  margin: 25px 50px;
+  // margin: 25px 50px;
 }
 
 .name_follow {
-  width: 50%;
+  // width: 50%;
   text-align: center;
   margin: 100px 0px;
 }
@@ -642,8 +642,12 @@ button {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  // background-image: url("/images/マスクグループ 1.png");
   margin: 0px 35px;
+}
+
+.sized {
+  width: 50%;
+  height: 50%;
 }
 
 .my_name {
