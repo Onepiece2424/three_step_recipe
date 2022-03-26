@@ -621,33 +621,21 @@ button {
 //マイページ
 .my_page_main {
   margin: 0 10px;
-  // display: flex;
-  // height: 650px;
 }
 
 .my_image {
-  // width: 50%;
-  // height: 600px;
-  text-align: center;
-  // margin: 25px 50px;
-}
-
-.name_follow {
-  // width: 50%;
   text-align: center;
   margin: 100px 0px;
 }
 
-.circle{
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  margin: 0px 35px;
+.name_follow {
+  text-align: center;
+  margin: 100px 0px;
 }
 
 .sized {
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 80%;
 }
 
 .my_name {
