@@ -3,7 +3,7 @@
     <%= notice %>
     <h3>ALL recipes</h3>
     <div class="my_recipe_container">
-      <div class="row">
+      <div class="row my_recipe_row">
         <% @results.each do |recipe| %>
           <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
             <div class="card_contents col-12 col-md-4 col-lg-2">
