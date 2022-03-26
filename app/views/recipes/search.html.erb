@@ -2,7 +2,7 @@
   <div class="main_in_page">
     <%= notice %>
     <h3>ALL recipes</h3>
-    <div class="container favorite_block">
+    <div class="my_recipe_container">
       <div class="row">
         <% @results.each do |recipe| %>
           <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
