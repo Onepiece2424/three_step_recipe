@@ -502,6 +502,14 @@ button {
   }
 }
 
+@media (min-width: 1200px) {
+  /* ウインドウ幅768px以上の時に適用されるスタイル */
+  .process_block {
+    // padding: 40px 0px;
+    margin: 85px 0;
+  }
+}
+
 //コメント部分
 .comment_block {
   margin: 100px 20px 0px;
