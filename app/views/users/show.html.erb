@@ -2,7 +2,11 @@
   <h3>My plofile</h3>
   <div class="mypage_main">
     <div class="my_image">
-      <div class="circle"></div>
+      <div class="circle">
+        <% if current_user.avatar.attached? %>
+          <%= image_tag current_user.avatar %>
+        <% end %>
+      </div>
     </div>
     <div class="name_follow">
       <div class="my_name">
