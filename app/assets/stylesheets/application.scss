@@ -336,7 +336,7 @@ button {
   border-radius: 0;
 }
 
-// /*********** ここまでベースCSS・リセットCSS ***********/
+// /*********** ここでベースCSS・リセットCSS ***********/
 .carousel {
   width: 100%;
   height: calc(600px * 0.5625);
@@ -603,10 +603,9 @@ button {
 
 .sub_image {
   background-image: url("/images/black-bean-close-up-cooked-16407741.png");
-  height: 760px;
+  height: auto;
   width: 100%;
   margin: 0;
-  // opacity: 0.4;
   background-size: cover;
 }
 
