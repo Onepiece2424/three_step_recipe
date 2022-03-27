@@ -211,13 +211,38 @@ input[type="email"],input[type="password"],input[type="text"] {
 }
 
 //メインページ、my recipe カードデザイン
-.my_recipe_title {
-  margin: 0px auto;
+.main_page_my_recipe_container {
+//   // display: flex;
+//   // flex-wrap: wrap;
+//   // margin: 0px 2%;
+  // margin: 0;
+//   // padding: 0 20px;
+  // width: 90%;
 }
 
+// .my_recipe_title {
+//   // margin: 0px auto;
+// }
 
+// .card_contents1 {
+//   padding: 0 8.5%;
+// }
 
+.my-recipe-row {
+  // margin: 0;
+  // width: 80%;
+}
 
+.my-recipe-card-skin {
+  // margin: 0 10px;
+  // padding: 0 10px;
+}
+
+.card1 {
+  width: 180px;
+  height: auto;
+  margin: 5px auto;
+}
 
 
 
