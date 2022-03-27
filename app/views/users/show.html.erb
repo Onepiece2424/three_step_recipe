@@ -2,11 +2,23 @@
   <h3>My plofile</h3>
   <div class="row my_page_main">
     <div class="my_image col-xs-12 col-md-6">
+      <div>
       <% if current_user.avatar.attached? %>
         <%= image_tag current_user.avatar,class: 'sized' %>
       <% else %>
         <%= image_tag 'noimage.jpg', class: 'sized' %>
       <% end %>
+      </div>
+      <br>
+      <div>
+      <%= form_with model: @user do |form| %>
+        <%= form.label :avatar, 'プロフ画像編集' %>
+        <%= form.file_field :avatar  %>
+        <div>
+          <%= form.submit "Update my profile image", class: 'update_image_button' %>
+        </div>
+      <% end %>
+      </div>
     </div>
     <div class="name_follow my_name col-xs-12 col-md-6">
       <p>ユーザー名：<%= current_user.username %></p>
