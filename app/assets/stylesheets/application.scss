@@ -188,11 +188,6 @@ input[type="email"],input[type="password"],input[type="text"] {
   padding-bottom: 10px;
 }
 
-// .favorite_block {
-//   margin: 0px 10%;
-//   // display: flex;
-// }
-
 @media (min-width: 768px) {
   .favorite_block {
     margin: 0px 10%;
@@ -211,20 +206,21 @@ input[type="email"],input[type="password"],input[type="text"] {
   margin: 0px 2%;
 }
 
-.my_recipe_title {
-  margin: 0px auto;
-}
-
 .card_contents {
   padding: 0 8.5%;
 }
 
-// @media (max-width: 768px) {
-//   .my_recipe_row {
-//     // margin: 0px 10%;
-//     padding: 0 28%;
-//   }
-// }
+//メインページ、my recipe カードデザイン
+.my_recipe_title {
+  margin: 0px auto;
+}
+
+
+
+
+
+
+
 
 //カードデザイン
 .card {
