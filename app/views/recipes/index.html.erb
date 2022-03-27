@@ -72,15 +72,15 @@
       </div>
     </div>
     <br>
-    <div class="my_recipe_container">
-      <div class="row">
-        <div class="my_recipe_title col-sm-12">
+    <div class="container main_page_my_recipe_container">
+      <div class="row my_recipe_row">
+        <div class="my_recipe_title col-12">
           <h3>My recipe</h3>
         </div>
       <% @my_recipes.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
-          <div class="card_contents col-12 col-md-4 col-lg-2">
-            <div class="card card-skin">
+          <div class="card_contents1 col-12 col-md-4 col-lg-2">
+            <div class="card my-recipe-card-skin ">
               <div class="card__imgframe">
                 <% if recipe.images.blank? %>
                   <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '303x178' %>

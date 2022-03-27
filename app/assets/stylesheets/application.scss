@@ -219,6 +219,13 @@ input[type="email"],input[type="password"],input[type="text"] {
   padding: 0 8.5%;
 }
 
+// @media (max-width: 768px) {
+//   .my_recipe_row {
+//     // margin: 0px 10%;
+//     padding: 0 28%;
+//   }
+// }
+
 //カードデザイン
 .card {
   width: 210px;
@@ -265,6 +272,13 @@ input[type="email"],input[type="password"],input[type="text"] {
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,.2);
+}
+
+.my-recipe-card-skin {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.2);
+  margin: 0 10px;
 }
 
 .recipe_username {
