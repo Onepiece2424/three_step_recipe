@@ -224,9 +224,9 @@ input[type="email"],input[type="password"],input[type="text"] {
 //   // margin: 0px auto;
 // }
 
-// .card_contents1 {
-//   padding: 0 8.5%;
-// }
+.card_contents1 {
+  padding: 0 8.5%;
+}
 
 .my-recipe-row {
   // margin: 0;
@@ -244,7 +244,16 @@ input[type="email"],input[type="password"],input[type="text"] {
   margin: 5px auto;
 }
 
-
+@media (max-width: 767px) {
+  .main_page_my_recipe_container {
+    padding: 0 22%;
+  }
+  my-recipe-row {
+    // margin: 0 5%;
+    // padding: 0 100px;
+    // width: 80%;
+  }
+}
 
 
 //カードデザイン
