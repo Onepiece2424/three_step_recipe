@@ -20,12 +20,11 @@
       <% end %>
       </div>
     </div>
-    <div class="name_follow my_name col-xs-12 col-md-6">
+    <div class="name_follow col-xs-12 col-md-6">
       <p>ユーザー名：<%= current_user.username %></p>
       <p>アドレス：<%= current_user.email %></p>
       <p>レシピ投稿数：<%= current_user.recipes.count %></p>
       <p>お気に入りしたレシピの数：<%= @favorite_recipes.count %></p>
-      <div class="my_follow">FOLLOW</div>
     </div>
   </div>
   <h3>My favorite recipes</h3>
