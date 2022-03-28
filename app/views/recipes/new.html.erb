@@ -1,33 +1,39 @@
+<div class="main_page">
+  <div class="main_in_page">
+
+
 <h3>Create a new recipe</h3>
-<div class="main">
+<div class="new_recipe_main_contents">
   <%= form_with model: @recipe do |form| %>
-  <div class="flexbox">
-    <div class="main_procedure">
-      <div class="sub_process">
+  <div class="container flexbox">
+    <div class="row main_procedure">
+      <div class="sub_process col-12">
         <%= form.label :title, 'Recipe Title' %>
         <%= form.text_field :title  %>
       </div>
-      <div class="sub_process">
+      <div class="sub_process col-12">
         <%= form.label :process1, 'Recipe procedure①' %>
         <%= form.text_field :process1 %>
       </div>
-      <div class="sub_process">
+      <div class="sub_process col-12">
         <%= form.label :process2, 'Recipe procedure②' %>
         <%= form.text_field :process2 %>
       </div>
-      <div class="sub_process">
+      <div class="sub_process col-12">
         <%= form.label :process3, 'Recipe procedure③' %>
         <%= form.text_field :process3 %>
       </div>
-      <div class="sub_process">
+      <div class="sub_process col-12">
         <%= form.label :images, 'レシピの手順数に合わせて画像を投稿しよう！' %>
         <%= form.label :images, 'レシピ画像を選択してください。', class: "image_input_btn" %>
         <%= form.file_field :images, multiple: true, class: "image_form" %>
       </div>
-      <div class="new_button">
+      <div class="new_button col-12">
         <%= form.submit :class=>"btn" %>
       </div>
     </div>
   </div>
   <% end %>
+</div>
+</div>
 </div>

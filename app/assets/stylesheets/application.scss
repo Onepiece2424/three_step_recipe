@@ -17,7 +17,18 @@
 
 body {
   width: 100%;
-  margin: 0px auto;
+  margin: 0px;
+  background-color:#fdf5e6;
+}
+
+.hwrapper{
+  width: 100%;
+  background-color: #FDE9FB;
+}
+
+.header{
+  max-width: 800px;
+  padding: 10px;
 }
 
 //ヘッダー
@@ -35,12 +46,22 @@ header h1 {
 }
 
 //ログイン＆ユーザー登録ボタン
-.login {
+.main_login_page {
+  margin: 10 10px;
+  padding: 30px 0px;
+}
+
+
+h2 {
+  text-align: center;
+}
+
+.hamburger_menu {
   position:absolute; top:20px; right:25px;
   color: black;
 }
 
-.login:hover {
+.hamburger_menu:hover {
   cursor: pointer;
 }
 
@@ -96,6 +117,7 @@ header h1 {
   opacity: 0;
   visibility: hidden;
   transition: opacity .5s, visibility .5s;
+  z-index: 2;
 }
 
 .nav.show {
@@ -118,14 +140,19 @@ li.nav_menu_li:hover {
 }
 
 //ユーザー新規登録画面
+.main_signup_page {
+  margin: 10 10px;
+  padding: 20px 0px;
+}
+
 .signup {
-  padding-top: 30px;
+  padding: 30px 60px;
   width: 100%;
   text-align: center;
 }
 
 .log {
-  padding-top: 90px;
+  margin: 20px;
 }
 
 input[type="email"],input[type="password"],input[type="text"] {
@@ -138,8 +165,8 @@ input[type="email"],input[type="password"],input[type="text"] {
   padding-bottom: 50px;
 }
 
-.actions {
-  padding-top: 50px;
+.login_link_signup_button {
+  padding: 30px 0px 5px;
 }
 
 //パスワードはお忘れですかボタン
@@ -151,6 +178,7 @@ input[type="email"],input[type="password"],input[type="text"] {
 .main_page {
   width: 100%;
   margin: 0;
+  text-align: center;
   height: auto;
   background-color:#fdf5e6;
 }
@@ -160,16 +188,79 @@ input[type="email"],input[type="password"],input[type="text"] {
   padding-bottom: 10px;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
+@media (min-width: 768px) {
+  .favorite_block {
+    margin: 0px 10%;
+    display: flex;
+  }
 }
 
-//カードデザイン
-.card{
-  width: 288px;
+.favorite_main_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my_recipe_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 2%;
+}
+
+.card_contents {
+  padding: 0 8.5%;
+}
+
+//メインページ、my recipe カードデザイン
+.main_page_my_recipe_container {
+//   // display: flex;
+//   // flex-wrap: wrap;
+//   // margin: 0px 2%;
+  // margin: 0;
+//   // padding: 0 20px;
+  // width: 90%;
+}
+
+// .my_recipe_title {
+//   // margin: 0px auto;
+// }
+
+.card_contents1 {
+  padding: 0 8.5%;
+}
+
+.my-recipe-row {
+  // margin: 0;
+  // width: 80%;
+}
+
+.my-recipe-card-skin {
+  // margin: 0 10px;
+  // padding: 0 10px;
+}
+
+.card1 {
+  width: 180px;
   height: auto;
-  margin: 0px 5px;
+  margin: 5px auto;
+}
+
+@media (max-width: 767px) {
+  .main_page_my_recipe_container {
+    padding: 0 22%;
+  }
+  my-recipe-row {
+    // margin: 0 5%;
+    // padding: 0 100px;
+    // width: 80%;
+  }
+}
+
+
+//カードデザイン
+.card {
+  width: 210px;
+  height: auto;
+  margin: 5px auto;
 }
 
 .card:hover {
@@ -213,6 +304,13 @@ input[type="email"],input[type="password"],input[type="text"] {
   box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
 
+.my-recipe-card-skin {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.2);
+  margin: 0 10px;
+}
+
 .recipe_username {
   font-size: 15px;
   margin: 10px 0px;
@@ -233,10 +331,6 @@ input[type="email"],input[type="password"],input[type="text"] {
   opacity: 0.4;
 }
 
-.new_recipe {
-  margin: 50px 100px;
-}
-
 .new_path_button {
   border-radius: 100vh;
   width: 100%;
@@ -247,6 +341,7 @@ input[type="email"],input[type="password"],input[type="text"] {
 .search_form {
   text-align: center;
   padding: 10px 0px;
+  margin: 0px auto;
 }
 
 .search_block {
@@ -259,7 +354,8 @@ input[type="email"],input[type="password"],input[type="text"] {
 }
 
 .search_form button[type=submit] {
-font-size: 22px;
+font-size: 25px;
+width: 30px;
 color: #FFF;
 background: #474747;
 border: 2px solid #474747;
@@ -267,16 +363,103 @@ border-radius: 0 3px 3px 0;
 cursor: pointer;
 }
 
+//カルーセル
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border-radius: 0;
+}
+
+// /*********** ここでベースCSS・リセットCSS ***********/
+.carousel {
+  width: 100%;
+  height: calc(600px * 0.5625);
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.carousel-area {
+  /* リスト数×リスト幅を計算してwidth指定してもいいが、汎用性を考慮してjQueryで計算代入する */
+  height: 100%;
+  position: absolute;
+  display: flex;
+}
+// /* object-fitを使用せずに画像トリミングさせるためにbackgroundで指定 */
+.carousel-list {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+// /*********** スライド送りボタン ***********/
+// /* 共有パーツ */
+.arow-wrap {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arrow-btn {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(113, 135, 245, 0.8);
+  border-radius: 50%;
+  transition: .2s;
+}
+.arrow-btn:focus {
+  box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
+}
+.arrow-btn:hover {
+  background-color: rgb(51, 79, 216);
+  box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
+}
+/* 左 */
+.arrow-left {
+  position: relative
+}
+.arrow-left:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fefefe;
+  border-left: 2px solid #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%)rotate(-45deg);
+}
+/* 右 */
+.arrow-right {
+  position: relative
+}
+.arrow-right:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fefefe;
+  border-left: 2px solid #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -50%)rotate(135deg);
+}
+
 //recipe/newアクションページ
 .recipe_new_title {
   font-size: 30px;
   margin: 18px 50px 5px;
-}
-
-.main {
-  text-align: center;
-  margin: 0px 140px;
-  width: 1100px;
 }
 
 .main_procedure {
@@ -301,14 +484,11 @@ cursor: pointer;
 .image_input_btn{
   display: block;
   background-color: #228B22;
-  width: 350px;
   height: 30px;
-  margin: 0px 400px;
   border-radius: 5px;
   padding: 4px 2px;
   color: white;
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
 }
 
@@ -324,37 +504,76 @@ cursor: pointer;
   font-family: 'Courier New', Courier, monospace;
 }
 
-.main_in_page2 {
-  margin: 13px 244px;
-  display: flex;
+.image_content_block {
+  margin: 50px 0px;
 }
 
-.main_left {
-  text-align: center;
-}
-
-.main_left2 {
-  padding: 10px;
-}
-
-.main_right {
-  display:flex;
-  flex-flow: column;
-  height: 678px;
-  width: 100%;
-  padding: 0px 50px;
+.img {
+  width: 95%;
+  height: auto;
 }
 
 .process_block {
-  padding:1em;
+  width: 90%;
+  padding: 20px 0px;
   margin:0.5em auto;
-  height: 226px;
+  height: auto;
+  text-align: center;
+}
+
+@media (min-width: 375px) {
+  /* ウインドウ幅375px以上の時に適用されるスタイル */
+  .process_block {
+    margin: 30px 0px;
+  }
+  .main_right {
+    padding: 30px 0px;
+  }
+}
+
+@media (min-width: 575px) {
+  /* ウインドウ幅575px以上の時に適用されるスタイル */
+  .process_block {
+    padding: 30px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* ウインドウ幅768px以上の時に適用されるスタイル */
+  .process_block {
+    padding: 40px 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* ウインドウ幅992px以上の時に適用されるスタイル */
+  .process_block {
+    padding: 60px 0px;
+  }
+  .comment_block {
+    margin: 100px 244px 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* ウインドウ幅768px以上の時に適用されるスタイル */
+  .process_block {
+    // padding: 40px 0px;
+    margin: 85px 0;
+  }
 }
 
 //コメント部分
 .comment_block {
-  margin: 100px 244px 0px;
+  margin: 100px 20px 0px;
   padding: 20px 0px;
+}
+
+@media (min-width: 992px) {
+  /* ウインドウ幅992px以上の時に適用されるスタイル */
+  .comment_block {
+    margin: 100px 100px 0px;
+  }
 }
 
 .comment_main {
@@ -402,50 +621,69 @@ cursor: pointer;
 
 .main_title {
   text-align: center;
-  padding: 200px 0px;
+  padding: 200px 0px 50px;
   font-size: 100px;
   font-weight: bold;
 }
 
+.sub_title {
+  text-align: center;
+  margin: 0px 10%;
+  color: #0000BB;
+  background-color: rgba(255, 255, 255, 0.562);
+  font-size: 23px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .title_css {
   text-decoration: none !important;
-  color: white;
+  color: #0000BB;
+  background-color: rgba(255, 255, 255, 0.562);
+}
+
+.title_css:hover {
+  color: antiquewhite;
+}
+
+.sub_image {
+  background-image: url("/images/black-bean-close-up-cooked-16407741.png");
+  height: auto;
+  width: 100%;
+  margin: 0;
+  background-size: cover;
+}
+
+.main_explain {
+  text-align: center;
+  padding: 250px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  color: #0000BB;
+  background-color: rgba(255, 255, 255, 0.562);
 }
 
 //マイページ
-.mypage_main {
+.my_page_main {
   margin: 0 10px;
-  display: flex;
-  height: 650px;
 }
 
 .my_image {
-  width: 50%;
-  height: 600px;
-  text-align: center;
-  margin: 25px 50px;
-}
-
-.name_follow {
-  width: 50%;
   text-align: center;
   margin: 100px 0px;
 }
 
-.circle{
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background-image: url("/images/マスクグループ 1.png");
-  margin: 0px 35px;
+.name_follow {
+  text-align: center;
+  margin: 100px 0px;
 }
 
-.my_name {
-  height: 250px;
+.sized {
+  width: 70%;
+  height: 80%;
 }
 
-.my_follow {
-  height: 250px;
+.name_follow {
+  padding: 50px 0;
 }
 
 .top_back_button {
@@ -461,15 +699,56 @@ h3 {
   padding: 10px 0px;
 }
 
-//検索結果表示ページ
-.main_search_page {
-  width: 100%;
-  margin: 0;
-  height: 740px;
-  background-color:#fdf5e6;
+.update_image_button {
+  margin: 20px 0;
 }
 
-.main_in_search_page {
-  margin: 0 10px;
-  padding: 10px 0px;
+//検索結果表示ページ
+// .main_search_page {
+//   width: 100%;
+//   margin: 0;
+//   height: 740px;
+//   background-color:#fdf5e6;
+// }
+
+// .main_in_search_page {
+//   margin: 0 10px;
+//   padding: 10px 0px;
+// }
+
+.back-to-top {
+  right: 0;
+  // display: block;
+  text-align: right;
+  width: 50%;
+}
+
+#contents {
+  height: 2000px;
+  background: linear-gradient(gray, white);
+}
+
+/* トップに戻るボタン */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: none;
+  width: 40px;
+  height: 40px;
+
+  background-color: #f0f0f0;
+  color: #333;
+  opacity: 0.6;
+
+  font-size: 1.6rem;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* マウスを乗せた時に透明度を変える */
+.back-to-top:hover {
+  opacity: 1;
 }

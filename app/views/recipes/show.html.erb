@@ -1,31 +1,41 @@
 <div class="main_page">
-<div class="recipe_title">Recipe Title:　<%= @recipe.title %></div>
-  <div class="main_in_page2">
-    <div class="main_left">
-      <div class="main_left2">
-        <% if @recipe.images.attached? %>
-          <% @recipe.images.each do |image| %>
-            <%= image_tag image.variant(resize: "440x220!") %>
+<div class="recipe_title">Recipe Title:<%= @recipe.title %></div>
+  <div class="recipe_detail_contents container">
+    <div class="row">
+      <div class="main_left col-sm-12 col-md-6">
+        <div class="image_contents">
+          <% if @recipe.images.attached? %>
+            <% @recipe.images.each do |image| %>
+            <div class="image_content_block">
+              <%= image_tag image.variant(resize: "440x220!"), class: "img" %>
+            </div>
+            <% end %>
+          <% else %>
+            <div class="image_content_block">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
+            <div class="image_content">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
+            <div class="image_content">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
           <% end %>
-        <% else %>
-          <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
-          <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
-          <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
-        <% end %>
+        </div>
       </div>
-    </div>
-    <div class="main_right">
-      <div class="process_block">
-        <p>Recipe procedure①</p>
-        <%= @recipe.process1 %>
-      </div>
-      <div class="process_block">
-        <p>Recipe procedure②</p>
-        <%= @recipe.process2 %>
-      </div>
-      <div class="process_block">
-        <p>Recipe procedure③</p>
-        <%= @recipe.process3 %>
+      <div class="main_right col-sm-12 col-md-6">
+        <div class="process_block">
+          <p>Recipe procedure①</p>
+          <%= @recipe.process1 %>
+        </div>
+        <div class="process_block">
+          <p>Recipe procedure②</p>
+          <%= @recipe.process2 %>
+        </div>
+        <div class="process_block">
+          <p>Recipe procedure③</p>
+          <%= @recipe.process3 %>
+        </div>
       </div>
     </div>
   </div>

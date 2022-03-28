@@ -1,21 +1,34 @@
 <div class="main_page">
   <h3>My plofile</h3>
-  <div class="mypage_main">
-    <div class="my_image">
-      <div class="circle"></div>
-    </div>
-    <div class="name_follow">
-      <div class="my_name">
-        <p>ユーザー名：<%= current_user.username %></p>
-        <p>アドレス：<%= current_user.email %></p>
-        <p>レシピ投稿数：<%= current_user.recipes.count %></p>
-        <p>お気に入りしたレシピの数：<%= @favorite_recipes.count %></p>
+  <div class="row my_page_main">
+    <div class="my_image col-xs-12 col-md-6">
+      <div>
+      <% if current_user.avatar.attached? %>
+        <%= image_tag current_user.avatar,class: 'sized' %>
+      <% else %>
+        <%= image_tag 'noimage.jpg', class: 'sized' %>
+      <% end %>
       </div>
-      <div class="my_follow">FOLLOW</div>
+      <br>
+      <div>
+      <%= form_with model: @user do |form| %>
+        <%= form.label :avatar, 'プロフ画像編集' %>
+        <%= form.file_field :avatar  %>
+        <div>
+          <%= form.submit "Update my profile image", class: 'update_image_button' %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+    <div class="name_follow col-xs-12 col-md-6">
+      <p>ユーザー名：<%= current_user.username %></p>
+      <p>アドレス：<%= current_user.email %></p>
+      <p>レシピ投稿数：<%= current_user.recipes.count %></p>
+      <p>お気に入りしたレシピの数：<%= @favorite_recipes.count %></p>
     </div>
   </div>
   <h3>My favorite recipes</h3>
-  <div class="container">
+  <div class="my_recipe_container">
     <% @favorite_recipes.each do |recipe| %>
       <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
         <div class="card card-skin">
@@ -35,7 +48,7 @@
               <% end %>
             </div>
             <div class="card__overviewtext">
-              <div class="recipe_username">Username:　<%= recipe.user.username %></div>
+              <div class="recipe_username">Username:<%= recipe.user.username %></div>
               <div class="recipe_edit_delete_link">
                 <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark recipe_edit" %>
                 <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark recipe_delete" %>

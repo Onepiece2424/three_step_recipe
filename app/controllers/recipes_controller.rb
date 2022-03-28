@@ -4,8 +4,9 @@ class RecipesController < ApplicationController
   before_action :ensure_user, only: [:edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.with_attached_images.order(:updated_at,:created_at).reverse_order.limit(5)
-    @my_recipes = current_user.recipes.order(:updated_at,:created_at).reverse_order.limit(5)
+    @recipes = Recipe.with_attached_images.order(:updated_at,:created_at).reverse_order
+    @my_recipes = current_user.recipes.order(:updated_at,:created_at).reverse_order
+    @all_ranks = Recipe.find(Favorite.group(:recipe_id).order('count(recipe_id) desc').limit(5).pluck(:recipe_id))
   end
 
   def search
