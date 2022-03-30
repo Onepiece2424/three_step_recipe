@@ -9,6 +9,7 @@ RSpec.describe "recipeのテスト", type: :request do
     sign_in user
     get recipes_path
     # recipe.images << image
+    recipe.images = fixture_file_upload("spec/fixtures/test.png")
   end
 
   describe 'recipeメインページ' do
@@ -20,8 +21,11 @@ RSpec.describe "recipeのテスト", type: :request do
       expect(response.body). to include recipe.title
     end
 
-    # it 'レスポンスにレシピ画像が含まれること' do
-    #   expect(response.body). to include rails_blob_path(recipe.images.first.attachment)
-    # end
+    it 'レスポンスにレシピ画像が含まれること' do
+      recipe.images.each do |image|
+        expect(response.body). to include rails_blob_path(image.first.attachment)
+      end
+      binding.pry
+    end
   end
 end
