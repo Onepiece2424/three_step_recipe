@@ -22,5 +22,9 @@ RSpec.feature 'recipeページのテスト' do
     scenario 'have_linkを用いたレシピ詳細リンクが表示されること' do
       expect(page).to have_link "3 step recipes"
     end
+
+    scenario 'have_buttonを用いた新規レシピ作成リンクが表示されること' do
+      expect(page).to have_button "Create a new recipe"
+    end
   end
 end
