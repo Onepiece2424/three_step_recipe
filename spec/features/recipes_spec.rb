@@ -4,13 +4,24 @@ RSpec.feature 'recipeページのテスト' do
   given(:recipe) { create(:recipe, user: user) }
   given(:user) { create(:user) }
 
-  background do
-    recipe.images = fixture_file_upload("spec/fixtures/test.png")
-    sign_in user
-    visit recipes_path
+  feature 'トップページのテスト' do
+    background do
+      sign_in user
+      visit root_path
+    end
+
+    scenario 'have_linkを用いたメインページリンクが表示されること' do
+      expect(page).to have_link "3 step recipes"
+    end
   end
 
   feature 'メインページのテスト' do
+    background do
+      recipe.images = fixture_file_upload("spec/fixtures/test.png")
+      sign_in user
+      visit recipes_path
+    end
+
     scenario 'レシピ画像が表示されること' do
       expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
     end
