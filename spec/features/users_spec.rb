@@ -33,5 +33,14 @@ RSpec.feature 'ログインとログアウト', type: :feature do
     scenario 'マイページにレシピ画像が表示されること' do
       expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
     end
+
+    scenario 'マイページにハンバーガーメニューが表示されること' do
+      expect(page).to have_link "サインアップ"
+      expect(page).to have_link "ログイン"
+      expect(page).to have_link "ログアウト"
+      expect(page).to have_link "メインページ"
+      expect(page).to have_link "レシピ投稿ページ"
+      expect(page).to have_link "マイページ"
+    end
   end
 end
