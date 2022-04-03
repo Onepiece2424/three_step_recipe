@@ -18,10 +18,14 @@ RSpec.describe "recipeのテスト", type: :request do
     it 'レスポンスにレシピ名が含まれること' do
       expect(response.body). to include recipe.title
     end
-   
+
+    it 'レスポンスにレシピ作成者名が含まれること' do
+      expect(response.body). to include recipe.user.username
+    end
+
     it 'レスポンスにレシピ画像が含まれること' do
       recipe.images.each do |image|
-        expect(response.body).to include rails_blob_path(image.first.attachment)
+        expect(response.body).to include rails_blob_path(recipe.images.first.attachment)
       end
     end
   end
