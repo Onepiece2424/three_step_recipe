@@ -11,8 +11,12 @@ RSpec.feature 'recipeページのテスト' do
   end
 
   feature 'メインページのテスト' do
-    scenario '商品画像が表示されること' do
+    scenario 'レシピ画像が表示されること' do
       expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
+    end
+
+    scenario 'レシピ名が表示されること' do
+      expect(page).to have_content recipe.title
     end
   end
 end
