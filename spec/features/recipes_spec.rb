@@ -41,7 +41,6 @@ RSpec.feature 'recipeページのテスト' do
     scenario 'Create a new recipeボタンをクリック後、レシピ作成ページへ移動されること' do
       click_button "Create a new recipe"
       expect(page).to have_current_path new_recipe_path
-      binding.pry
     end
   end
 end
