@@ -4,6 +4,5 @@ FactoryBot.define do
     email                 {"test@gmail.com"}
     password              {"12345678"}
     password_confirmation {"12345678"}
-    # recipe
   end
 end
