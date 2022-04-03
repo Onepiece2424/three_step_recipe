@@ -68,6 +68,15 @@ RSpec.feature 'recipeページのテスト' do
       expect(page).to have_content recipe.user.username
       expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
     end
+
+    scenario 'ハンバーガーメニューが表示されること' do
+      expect(page).to have_link "サインアップ"
+      expect(page).to have_link "ログイン"
+      expect(page).to have_link "ログアウト"
+      expect(page).to have_link "メインページ"
+      expect(page).to have_link "レシピ投稿ページ"
+      expect(page).to have_link "マイページ"
+    end
   end
 
   feature '検索結果ページのテスト' do
