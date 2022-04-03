@@ -29,7 +29,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.with_attached_images.find(params[:id])
     @comment = Comment.new
     @comments = @recipe.comments.includes(:user)
   end
@@ -59,7 +59,7 @@ class RecipesController < ApplicationController
   end
 
   def set_q
-    @q = Recipe.ransack(params[:q])
+    @q = Recipe.with_attached_images.includes(:user).ransack(params[:q])
     @my_q = current_user.recipes.ransack(params[:q])
   end
 

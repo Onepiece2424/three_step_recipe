@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
-    @favorite_recipes = @user.favorite_recipes.includes(:user, :images_attachments).order(:updated_at, :created_at).reverse_order
+    @user = User.with_attached_avatar.find(params[:id])
+    @favorite_recipes = @user.favorite_recipes.with_attached_images.includes(:user, :images_attachments).order(:updated_at, :created_at).reverse_order
   end
 
   def update
