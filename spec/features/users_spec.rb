@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.feature 'ログインとログアウト', type: :feature do
   given(:user) { create(:user) }
   given!(:recipe) { create(:recipe, user: user) }
-  given(:favorite_recipes) { create_list(:recipe, 4, user: user) }
 
   scenario 'ログインする' do
     visit new_user_session_path
@@ -24,13 +23,14 @@ RSpec.feature 'ログインとログアウト', type: :feature do
     scenario 'ユーザー情報が表示されること' do
       expect(page).to have_content user.username
       expect(page).to have_content user.email
-      expect(page).to have_content user.recipes.count
     end
 
-    scenario '投稿したレシピが4つ表示されること' do
-      within('.name_follow') do
-        expect(page).to have_selector 'p', count: 4
-      end
+    scenario 'マイページにメインページリンクが表示されること' do
+      expect(page).to have_link "3 step recipes"
+    end
+
+    scenario 'マイページにレシピ画像が表示されること' do
+      expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
     end
   end
 end
