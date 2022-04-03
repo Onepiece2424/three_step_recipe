@@ -6,27 +6,63 @@ RSpec.describe "recipeのテスト", type: :request do
 
   before do
     sign_in user
-    get recipes_path
-    recipe.images = fixture_file_upload("spec/fixtures/test.png")
   end
 
-  describe 'recipeメインページ' do
+  describe 'トップページ' do
+    before do
+      get root_path
+    end
+
+    it 'レスポンスが返ってくること' do
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe 'メインページ' do
+    before do
+      get recipes_path
+      recipe.images = fixture_file_upload("spec/fixtures/test.png")
+    end
+
     it 'レスポンスが返ってくること' do
       expect(response.status).to eq(200)
     end
 
-    it 'レスポンスにレシピ名が含まれること' do
+    it 'レスポンスにレシピカード情報が含まれること' do
       expect(response.body). to include recipe.title
-    end
-
-    it 'レスポンスにレシピ作成者名が含まれること' do
       expect(response.body). to include recipe.user.username
+      expect(response.body). to include recipe_path(recipe.id)
+      expect(response.body). to include edit_recipe_path(recipe.id)
+    end
+  end
+
+  describe 'レシピ投稿ページ' do
+    before do
+      get new_recipe_path
     end
 
-    it 'レスポンスにレシピ画像が含まれること' do
-      recipe.images.each do |image|
-        expect(response.body).to include rails_blob_path(recipe.images.first.attachment)
-      end
+    it 'レスポンスが返ってくること' do
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe 'レシピ詳細ページ' do
+    before do
+      get recipe_path(recipe.id)
+    end
+
+    it 'レスポンスが返ってくること' do
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe 'レシピ詳細ページ' do
+    before do
+      get edit_recipe_path(recipe.id)
+    end
+
+    it 'レスポンスが返ってくること' do
+      expect(response.status).to eq(200)
     end
   end
 end
