@@ -60,17 +60,28 @@ RSpec.feature 'recipeページのテスト' do
       expect(page).to have_content recipe.user.username
       expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
     end
+  end
+
+  feature '検索結果ページのテスト' do
+    background do
+      recipe.images = fixture_file_upload("spec/fixtures/test.png")
+      sign_in user
+      visit search_recipes_path
+    end
 
     scenario 'レシピ検索結果から選択したレシピカード(All_recipes)へページ遷移できること' do
-      visit search_recipes_path
       click_link 'all_recipes'
       expect(page).to have_current_path recipe_path(recipe.id)
     end
 
     scenario 'レシピ検索結果から選択したレシピカード(My_recipes)へページ遷移できること' do
-      visit search_recipes_path
       click_link 'my_recipes'
       expect(page).to have_current_path recipe_path(recipe.id)
+    end
+
+    scenario 'レシピ検索結果からメインんページへ移動できること' do
+      click_link 'トップページへ戻る'
+      expect(page).to have_current_path recipes_path
     end
   end
 end
