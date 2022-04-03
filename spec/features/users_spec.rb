@@ -14,7 +14,7 @@ RSpec.feature 'ログインとログアウト', type: :feature do
     expect(page).to have_content "Signed in successfully."
   end
 
-  feature 'メインページのテスト' do
+  feature 'マイページのテスト' do
     background do
       recipe.images = fixture_file_upload("spec/fixtures/test.png")
       sign_in user
