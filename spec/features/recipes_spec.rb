@@ -52,5 +52,13 @@ RSpec.feature 'recipeページのテスト' do
       click_link 'my_recipes'
       expect(page).to have_current_path recipe_path(recipe.id)
     end
+
+    scenario '検索結果が表示されること' do
+      fill_in 'q[title_cont]', with: recipe.title
+      find("i.fa").click
+      expect(page).to have_content recipe.title
+      expect(page).to have_content recipe.user.username
+      expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
+    end
   end
 end
