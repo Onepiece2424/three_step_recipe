@@ -79,7 +79,7 @@ RSpec.feature 'recipeページのテスト' do
       expect(page).to have_current_path recipe_path(recipe.id)
     end
 
-    scenario 'レシピ検索結果からメインんページへ移動できること' do
+    scenario 'レシピ検索結果からメインページへ移動できること' do
       click_link 'トップページへ戻る'
       expect(page).to have_current_path recipes_path
     end
