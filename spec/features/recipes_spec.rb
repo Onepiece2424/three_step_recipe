@@ -34,6 +34,14 @@ RSpec.feature 'recipeページのテスト' do
       expect(page).to have_link "3 step recipes"
     end
 
+    scenario 'have_linkを用いたレシピ編集リンクが表示されること' do
+      expect(page).to have_link "Edit"
+    end
+
+    scenario 'have_linkを用いたレシピ削除リンクが表示されること' do
+      expect(page).to have_link "Delete"
+    end
+
     scenario 'have_buttonを用いた新規レシピ作成リンクが表示されること' do
       expect(page).to have_button "Create a new recipe"
     end
@@ -82,6 +90,14 @@ RSpec.feature 'recipeページのテスト' do
     scenario 'レシピ検索結果からメインページへ移動できること' do
       click_link 'トップページへ戻る'
       expect(page).to have_current_path recipes_path
+    end
+
+    scenario 'レシピ検索結果にレシピ編集リンクが表示されること' do
+      expect(page).to have_link "Edit"
+    end
+
+    scenario 'レシピ検索結果にレシピ削除リンクが表示されること' do
+      expect(page).to have_link "Delete"
     end
   end
 end
