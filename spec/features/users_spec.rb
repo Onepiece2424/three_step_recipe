@@ -27,7 +27,7 @@ RSpec.feature 'ログインとログアウト', type: :feature do
       expect(page).to have_content user.recipes.count
     end
 
-    scenario 'お気に入りしたレシピが4つ表示されること' do
+    scenario '投稿したレシピが4つ表示されること' do
       within('.name_follow') do
         expect(page).to have_selector 'p', count: 4
       end
