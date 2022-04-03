@@ -42,5 +42,15 @@ RSpec.feature 'recipeページのテスト' do
       click_button "Create a new recipe"
       expect(page).to have_current_path new_recipe_path
     end
+
+    scenario 'レシピカード(id:all_recipes)をクリック後、レシピ詳細ページへ移動されること' do
+      click_link 'all_recipes'
+      expect(page).to have_current_path recipe_path(recipe.id)
+    end
+
+    scenario 'レシピカード(id:my_recipes)をクリック後、レシピ詳細ページへ移動されること' do
+      click_link 'my_recipes'
+      expect(page).to have_current_path recipe_path(recipe.id)
+    end
   end
 end
