@@ -5,7 +5,7 @@
     <div class="my_recipe_container">
       <div class="row my_recipe_row">
         <% @results.each do |recipe| %>
-          <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
+          <%= link_to(recipe_path(recipe), class:"userList text-dark", id: "all_recipes") do %>
             <div class="card_contents col-12 col-md-4 col-lg-2">
               <div class="card card-skin">
                 <div class="card__imgframe">
@@ -50,7 +50,7 @@
     <h3>My recipe</h3>
     <div class="favorite_block">
       <% @my_results.each do |recipe| %>
-        <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
+        <%= link_to(recipe_path(recipe), class:"userList text-dark", id:"my_recipes") do %>
           <div class="card card-skin">
             <div class="card__imgframe">
               <% if recipe.images.blank? %>

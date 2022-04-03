@@ -60,5 +60,17 @@ RSpec.feature 'recipeページのテスト' do
       expect(page).to have_content recipe.user.username
       expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
     end
+
+    scenario 'レシピ検索結果から選択したレシピカード(All_recipes)へページ遷移できること' do
+      visit search_recipes_path
+      click_link 'all_recipes'
+      expect(page).to have_current_path recipe_path(recipe.id)
+    end
+
+    scenario 'レシピ検索結果から選択したレシピカード(My_recipes)へページ遷移できること' do
+      visit search_recipes_path
+      click_link 'my_recipes'
+      expect(page).to have_current_path recipe_path(recipe.id)
+    end
   end
 end
