@@ -18,5 +18,9 @@ RSpec.feature 'recipeページのテスト' do
     scenario 'レシピ名が表示されること' do
       expect(page).to have_content recipe.title
     end
+
+    scenario 'have_linkを用いたレシピ詳細リンクが表示されること' do
+      expect(page).to have_link "3 step recipes"
+    end
   end
 end
