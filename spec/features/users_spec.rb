@@ -27,6 +27,7 @@ RSpec.feature 'ログインとログアウト', type: :feature do
 
     scenario 'マイページにメインページリンクが表示されること' do
       expect(page).to have_link "3 step recipes"
+      expect(page).to have_link "トップページへ戻る"
     end
 
     scenario 'マイページにレシピ画像が表示されること' do
