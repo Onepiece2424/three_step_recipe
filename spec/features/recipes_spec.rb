@@ -8,16 +8,6 @@ RSpec.feature 'recipeページのテスト' do
     sign_in user
   end
 
-  feature 'トップページのテスト' do
-    background do
-      visit root_path
-    end
-
-    scenario 'have_linkを用いたメインページリンクが表示されること' do
-      expect(page).to have_link "3 step recipes"
-    end
-  end
-
   feature 'メインページのテスト' do
     background do
       recipe.images = fixture_file_upload("spec/fixtures/test.png")
