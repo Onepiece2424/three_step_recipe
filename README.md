@@ -49,3 +49,6 @@ https://stark-beach-93053.herokuapp.com/
 <p>・Heroku</p>
 <br>
 <h1>◯ER図</h1>
+<div>
+<img width="723" alt="スクリーンショット 2022-04-05 8 03 30" src="https://user-images.githubusercontent.com/79039664/161646450-96766e24-65dc-4317-8852-3d8a1d2044b2.png">
+</div>
