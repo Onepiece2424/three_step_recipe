@@ -20,14 +20,14 @@
     <div class="carousel">
     <ul class="carousel-area">
       <% @recipes.each do |recipe| %>
-        <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
+        <%= link_to(recipe_path(recipe), class:"userList text-dark", id: "all_recipes") do %>
           <li class="carousel-list">
             <div class="card card-skin">
               <div class="card__imgframe">
                 <% if recipe.images.blank? %>
                   <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '303x178' %>
                 <% else %>
-                  <%= image_tag recipe.images[0], size: '303x178' %>
+                  <%= image_tag rails_blob_path(recipe.images[0]), size: '303x178' %>
                 <% end %>
               </div>
               <div class="card__textbox">
@@ -78,7 +78,7 @@
           <h3>My recipe</h3>
         </div>
       <% @my_recipes.each do |recipe| %>
-        <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
+        <%= link_to(recipe_path(recipe), class:"userList text-dark", id:"my_recipes") do %>
           <div class="card_contents1 col-12 col-md-4 col-lg-2">
             <div class="card1 my-recipe-card-skin">
               <div class="card__imgframe">

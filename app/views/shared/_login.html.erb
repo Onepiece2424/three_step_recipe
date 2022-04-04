@@ -15,6 +15,9 @@
         <%= link_to 'マイページ', user_path(current_user.id), class:"userList text-dark" %>
       <% end %>
     </li>
+    <li class="nav_menu_li">
+      <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class:"userList text-dark" %>
+    </li>
   </ul>
 </nav>
 <script type="text/javascript">

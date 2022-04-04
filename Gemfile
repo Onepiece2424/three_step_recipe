@@ -2,11 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -30,6 +27,10 @@ gem 'image_processing', '~> 1.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
@@ -43,6 +44,7 @@ group :development do
   gem 'spring'
   gem 'rubocop', require: false
   gem 'rubocop-rails'
+  gem 'bullet'
 end
 
 group :test do
@@ -64,3 +66,5 @@ gem 'bootsnap', require: false
 gem 'mini_magick'
 gem 'ransack'
 gem 'font-awesome-rails'
+gem 'pg', group: :production
+gem "aws-sdk-s3", require: false

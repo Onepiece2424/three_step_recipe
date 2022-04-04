@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
   before_action :ensure_user, only: [:edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.with_attached_images.order(:updated_at,:created_at).reverse_order
+    @recipes = Recipe.with_attached_images.includes(:user).order(:updated_at,:created_at).reverse_order
     @my_recipes = current_user.recipes.order(:updated_at,:created_at).reverse_order
     @all_ranks = Recipe.find(Favorite.group(:recipe_id).order('count(recipe_id) desc').limit(5).pluck(:recipe_id))
   end
@@ -29,9 +29,9 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.with_attached_images.find(params[:id])
     @comment = Comment.new
-    @comments = @recipe.comments
+    @comments = @recipe.comments.includes(:user)
   end
 
   def edit
@@ -59,7 +59,7 @@ class RecipesController < ApplicationController
   end
 
   def set_q
-    @q = Recipe.ransack(params[:q])
+    @q = Recipe.with_attached_images.includes(:user).ransack(params[:q])
     @my_q = current_user.recipes.ransack(params[:q])
   end
 
