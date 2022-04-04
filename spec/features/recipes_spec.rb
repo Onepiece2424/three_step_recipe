@@ -24,12 +24,9 @@ RSpec.feature 'recipeページのテスト' do
       visit recipes_path
     end
 
-    scenario 'レシピ画像、タイトルが表示されること' do
+    scenario 'レシピカード情報とリンクが表示されること' do
       expect(page).to have_selector "img,[src$='#{recipe.images}.png']"
       expect(page).to have_content recipe.title
-    end
-
-    scenario 'メインページ、レシピ編集・削除リンク、新規レシピ作成ボタンが表示されること' do
       expect(page).to have_link "3 step recipes"
       expect(page).to have_link "Edit"
       expect(page).to have_link "Delete"
