@@ -67,3 +67,4 @@ gem 'mini_magick'
 gem 'ransack'
 gem 'font-awesome-rails'
 gem 'pg', group: :production
+gem "aws-sdk-s3", require: false
