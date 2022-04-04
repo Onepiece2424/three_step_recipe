@@ -4,9 +4,12 @@ RSpec.feature 'recipeページのテスト' do
   given(:recipe) { create(:recipe, user: user) }
   given(:user) { create(:user) }
 
+  background do
+    sign_in user
+  end
+
   feature 'トップページのテスト' do
     background do
-      sign_in user
       visit root_path
     end
 
@@ -18,7 +21,6 @@ RSpec.feature 'recipeページのテスト' do
   feature 'メインページのテスト' do
     background do
       recipe.images = fixture_file_upload("spec/fixtures/test.png")
-      sign_in user
       visit recipes_path
     end
 
@@ -27,13 +29,10 @@ RSpec.feature 'recipeページのテスト' do
       expect(page).to have_content recipe.title
     end
 
-    scenario 'メインページ、レシピ編集・削除リンクが表示されること' do
+    scenario 'メインページ、レシピ編集・削除リンク、新規レシピ作成ボタンが表示されること' do
       expect(page).to have_link "3 step recipes"
       expect(page).to have_link "Edit"
       expect(page).to have_link "Delete"
-    end
-
-    scenario 'have_buttonを用いた新規レシピ作成リンクが表示されること' do
       expect(page).to have_button "Create a new recipe"
     end
 
@@ -73,7 +72,6 @@ RSpec.feature 'recipeページのテスト' do
   feature '検索結果ページのテスト' do
     background do
       recipe.images = fixture_file_upload("spec/fixtures/test.png")
-      sign_in user
       visit search_recipes_path
     end
 
