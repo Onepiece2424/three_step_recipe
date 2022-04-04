@@ -1,24 +1,32 @@
-# README
+◯サービス名
+  3 step recipes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+◯サービス概要
+  このアプリは、３ステップで作れる料理をシェアできるレシピ投稿できるアプリです。
+このアプリ内で紹介している料理はどれも3つの調理工程にまとめられているので、料理初心者や日々の生活に時間がない人などにおすすめです。
+また、レシピ閲覧だけでなく、自分が作成したオリジナルレシピを投稿し、他のユーザーとシェアできます。
 
-Things you may want to cover:
+◯リンク
+https://stark-beach-93053.herokuapp.com/
 
-* Ruby version
+◯ターゲットユーザー
+・料理初心者
+・自炊する時間がない人
 
-* System dependencies
+◯ユーザーが抱える課題
+・日々の生活に時間が取られ、料理を楽しめない。
+・日々の生活に時間を取られ、手頃なものばかり食べ、栄養が偏りがちになる
 
-* Configuration
+◯実装機能
+・レシピ閲覧機能
+・レシピ投稿機能
+・レシピ編集機能
+・レシピ削除機能
+・コメント機能
+・検索機能
+・マイページ機能
+・お気に入り登録/削除機能
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+◯このサービスをなぜ作成したか
+・私には、日々の生活で料理をする時間がなく、栄養が偏り、いつも不健康そうなものばかり食べ、食事を済ませている社会人の友人がいました。
+そんな友人に簡単な料理でいいから、ぜひ自炊をし、きちんと栄養のあるものを食べ、心身ともにこれからの人生を楽しんでほしいという願いからこのアプリを作成しました。
