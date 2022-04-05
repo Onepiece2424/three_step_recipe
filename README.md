@@ -20,9 +20,9 @@ https://stark-beach-93053.herokuapp.com/
 <br>
 <h1>◯ターゲットユーザー</h1>
 <br>
-・料理初心者
-<br>
-・自炊する時間がない人
+<p>・料理初心者</p>
+<p>・自炊する時間がない人</p>
+<p>・栄養の偏った食事をしている人</p>
 <br>
 <h1>◯ユーザーが抱える課題</h1>
 <br>
@@ -40,7 +40,6 @@ https://stark-beach-93053.herokuapp.com/
 <p>・マイページ機能</p>
 <p>・お気に入り登録/削除機能</p>
 <br>
-
 <h1>◯使用技術</h1>
 <p>・ruby</p>
 <p>・ruby on rails</p>
