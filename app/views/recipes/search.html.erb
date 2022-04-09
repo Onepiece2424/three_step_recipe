@@ -2,11 +2,11 @@
   <div class="main_in_page">
     <%= notice %>
     <h3>ALL recipes</h3>
-    <div class="my_recipe_container">
+    <div class="container main_page_my_recipe_container">
       <div class="row my_recipe_row">
         <% @results.each do |recipe| %>
           <%= link_to(recipe_path(recipe), class:"userList text-dark", id: "all_recipes") do %>
-            <div class="card_contents col-12 col-md-4 col-lg-2">
+            <div class="card_contents col-xs-12 col-md-4">
               <div class="card card-skin">
                 <div class="card__imgframe">
                   <% if recipe.images.blank? %>
