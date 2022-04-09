@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  process1: MyText
+  process2: MyText
+  process3: MyText
+
+two:
+  process1: MyText
+  process2: MyText
+  process3: MyText

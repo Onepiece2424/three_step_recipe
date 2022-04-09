@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.all.each do |user|
+  user.recipes.create!(
+    title: 'チャーハン',
+    process1: '具材を切る',
+    process2: '炒める',
+    process3: '味付け'
+  )
+end
