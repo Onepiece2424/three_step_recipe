@@ -3,10 +3,10 @@
   <div class="row my_page_main">
     <div class="my_image col-xs-12 col-md-6">
       <div>
-      <% if current_user.avatar.attached? %>
-        <%= image_tag current_user.avatar,class: 'sized' %>
-      <% else %>
+      <% if current_user.avatar.blank? %>
         <%= image_tag 'noimage.jpg', class: 'sized' %>
+      <% else %>
+        <%= image_tag current_user.avatar,class: 'sized' %>
       <% end %>
       </div>
       <br>
