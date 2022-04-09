@@ -211,31 +211,8 @@ input[type="email"],input[type="password"],input[type="text"] {
 }
 
 //メインページ、my recipe カードデザイン
-.main_page_my_recipe_container {
-//   // display: flex;
-//   // flex-wrap: wrap;
-//   // margin: 0px 2%;
-  // margin: 0;
-//   // padding: 0 20px;
-  // width: 90%;
-}
-
-// .my_recipe_title {
-//   // margin: 0px auto;
-// }
-
 .card_contents1 {
   padding: 0 8.5%;
-}
-
-.my-recipe-row {
-  // margin: 0;
-  // width: 80%;
-}
-
-.my-recipe-card-skin {
-  // margin: 0 10px;
-  // padding: 0 10px;
 }
 
 .card1 {
@@ -247,11 +224,6 @@ input[type="email"],input[type="password"],input[type="text"] {
 @media (max-width: 767px) {
   .main_page_my_recipe_container {
     padding: 0 22%;
-  }
-  my-recipe-row {
-    // margin: 0 5%;
-    // padding: 0 100px;
-    // width: 80%;
   }
 }
 
@@ -380,7 +352,6 @@ button {
   border-radius: 0;
 }
 
-// /*********** ここでベースCSS・リセットCSS ***********/
 .carousel {
   width: 100%;
   height: calc(600px * 0.5625);
@@ -389,12 +360,11 @@ button {
   overflow: hidden;
 }
 .carousel-area {
-  /* リスト数×リスト幅を計算してwidth指定してもいいが、汎用性を考慮してjQueryで計算代入する */
   height: 100%;
   position: absolute;
   display: flex;
 }
-// /* object-fitを使用せずに画像トリミングさせるためにbackgroundで指定 */
+
 .carousel-list {
   height: 100%;
   background-size: cover;
@@ -402,7 +372,6 @@ button {
   background-repeat: no-repeat;
 }
 // /*********** スライド送りボタン ***********/
-// /* 共有パーツ */
 .arow-wrap {
   width: 90%;
   height: 100%;
@@ -429,6 +398,7 @@ button {
 .arrow-left {
   position: relative
 }
+
 .arrow-left:before {
   content: "";
   width: 10px;
@@ -440,6 +410,7 @@ button {
   left: 50%;
   transform: translate(-30%, -50%)rotate(-45deg);
 }
+
 /* 右 */
 .arrow-right {
   position: relative
@@ -522,7 +493,6 @@ button {
 }
 
 @media (min-width: 375px) {
-  /* ウインドウ幅375px以上の時に適用されるスタイル */
   .process_block {
     margin: 30px 0px;
   }
@@ -532,21 +502,18 @@ button {
 }
 
 @media (min-width: 575px) {
-  /* ウインドウ幅575px以上の時に適用されるスタイル */
   .process_block {
     padding: 30px 0px;
   }
 }
 
 @media (min-width: 768px) {
-  /* ウインドウ幅768px以上の時に適用されるスタイル */
   .process_block {
     padding: 40px 0px;
   }
 }
 
 @media (min-width: 992px) {
-  /* ウインドウ幅992px以上の時に適用されるスタイル */
   .process_block {
     padding: 60px 0px;
   }
@@ -556,9 +523,7 @@ button {
 }
 
 @media (min-width: 1200px) {
-  /* ウインドウ幅768px以上の時に適用されるスタイル */
   .process_block {
-    // padding: 40px 0px;
     margin: 85px 0;
   }
 }
@@ -570,7 +535,6 @@ button {
 }
 
 @media (min-width: 992px) {
-  /* ウインドウ幅992px以上の時に適用されるスタイル */
   .comment_block {
     margin: 100px 100px 0px;
   }
@@ -704,21 +668,8 @@ h3 {
 }
 
 //検索結果表示ページ
-// .main_search_page {
-//   width: 100%;
-//   margin: 0;
-//   height: 740px;
-//   background-color:#fdf5e6;
-// }
-
-// .main_in_search_page {
-//   margin: 0 10px;
-//   padding: 10px 0px;
-// }
-
 .back-to-top {
   right: 0;
-  // display: block;
   text-align: right;
   width: 50%;
 }

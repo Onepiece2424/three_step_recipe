@@ -72,6 +72,8 @@
       </div>
     </div>
     <br>
+    <br>
+    <br>
     <div class="container main_page_my_recipe_container">
       <div class="row my_recipe_row">
         <div class="my_recipe_title col-sm-12">
@@ -79,7 +81,7 @@
         </div>
       <% @my_recipes.each do |recipe| %>
         <%= link_to(recipe_path(recipe), class:"userList text-dark", id:"my_recipes") do %>
-          <div class="card_contents1 col-12 col-md-4 col-lg-2">
+          <div class="card_contents1 col-xs-12 col-md-4">
             <div class="card1 my-recipe-card-skin">
               <div class="card__imgframe">
                 <% if recipe.images.blank? %>
@@ -121,6 +123,8 @@
     </div>
     <br>
     <br>
+    <br>
+    <br>
     <div class="container main_page_my_recipe_container">
       <div class="row my_recipe_row">
         <div class="my_recipe_title col-sm-12">
@@ -128,8 +132,8 @@
         </div>
         <% @all_ranks.each do |recipe| %>
           <%= link_to(recipe_path(recipe), class:"userList text-dark") do %>
-            <div class="card_contents col-sm-12 col-md-4 col-lg-2">
-              <div class="card card-skin">
+            <div class="card_contents col-xs-12 col-md-4">
+              <div class="card1 my-recipe-card-skin">
                 <div class="card__imgframe">
                   <% if recipe.images.blank? %>
                     <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '303x178' %>
