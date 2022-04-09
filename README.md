@@ -42,8 +42,10 @@
 <br>
 <br>
 <h1>◯使用技術</h1>
-<p>・ruby</p>
-<p>・ruby on rails</p>
+<p>・Ruby</p>
+<p>・Ruby on rails</p>
+<p>・HTML/CSS</p>
+<p>・Bootstrap</p>
 <p>・Javascript</p>
 <p>・jQuery</p>
 <p>・AWS S3</p>
