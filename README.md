@@ -26,8 +26,10 @@
 <h1>◯デモ画像、操作方法</h1>
 <br>
 <h2>・トップページ</h2>
+<p>トップページでは、アプリ名の『3 step recipes』をクリックすることで、サインアップページ、ログインページ、メインページなどへ遷移できます。</p>
+<p>また、画面右上のハンバーガーメニューからも操作できます。</p>
 <p><img width="1431" alt="20220413_ポートフォリオ、トップページ" src="https://user-images.githubusercontent.com/79039664/163273433-51ce0172-620e-4ebc-85e6-5439e9be19be.png"></p>
-<h2>・新規ユーザー登録ページ</h2>
+<h2>・サインアップページ</h2>
 <p><img width="1438" alt="20220414_ポートフォリオ、サインアップ" src="https://user-images.githubusercontent.com/79039664/163277899-523d70ed-fad2-4a67-afa7-7af1bd12506c.png"></p>
 <h2>・ログインページ</h2>
 <p><img width="1440" alt="20220414_ポートフォリオ、ログイン" src="https://user-images.githubusercontent.com/79039664/163278074-b8f82c1a-e47f-4265-8e2c-0be3f354c129.png"></p>
