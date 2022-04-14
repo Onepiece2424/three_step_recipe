@@ -354,11 +354,12 @@ button {
 
 .carousel {
   width: 100%;
-  height: calc(600px * 0.5625);
+  height: calc(630px * 0.5625);
   position: relative;
   margin: 0 auto;
   overflow: hidden;
 }
+
 .carousel-area {
   height: 100%;
   position: absolute;
@@ -702,4 +703,21 @@ h3 {
 /* マウスを乗せた時に透明度を変える */
 .back-to-top:hover {
   opacity: 1;
+}
+
+/*お気に入りボタン*/
+.like-btn {
+  width: 25px;
+  height: 30px;
+  font-size: 25px;
+  color: #808080;
+  margin-left: 20px;
+}
+
+.unlike-btn {
+  width: 25px;
+  height: 30px;
+  font-size: 25px;
+  color: #e54747;
+  margin-left: 20px;
 }
