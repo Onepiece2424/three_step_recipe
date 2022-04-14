@@ -36,18 +36,20 @@
                         <span>お気に入り解除: </span>
                         <%=link_to recipe_favorites_path(recipe.id), method: :delete do %>
                           <i class="fa fa-heart unlike-btn"></i>
-                          <%= recipe.favorites.count %>
                         <% end %>
+                        <span>お気に入り数: </span>
+                        <%= recipe.favorites.count %>
                       </p>
                     <% else %>
-                    <p>
-                      <span>お気に入り登録: </span>
-                      <%=link_to recipe_favorites_path(recipe.id), method: :post do %>
-                        <i class="fa fa-heart like-btn"></i>
+                      <p>
+                        <span>お気に入り登録: </span>
+                        <%=link_to recipe_favorites_path(recipe.id), method: :post do %>
+                          <i class="fa fa-heart like-btn"></i>
+                        <% end %>
+                        <span>お気に入り数: </span>
                         <%= recipe.favorites.count %>
-                      <% end %>
-                    </p>
-                  <% end %>
+                      </p>
+                    <% end %>
                   <% else %>
                     <p><span>お気に入り数: </span><%= recipe.favorites.count %></p>
                   <% end %>
@@ -92,18 +94,20 @@
                     <span>お気に入り解除: </span>
                     <%=link_to recipe_favorites_path(recipe.id), method: :delete do %>
                       <i class="fa fa-heart unlike-btn"></i>
-                      <%= recipe.favorites.count %>
                     <% end %>
+                    <span>お気に入り数: </span>
+                    <%= recipe.favorites.count %>
                   </p>
                 <% else %>
-                <p>
-                  <span>お気に入り登録: </span>
-                  <%=link_to recipe_favorites_path(recipe.id), method: :post do %>
-                    <i class="fa fa-heart like-btn"></i>
+                  <p>
+                    <span>お気に入り登録: </span>
+                    <%=link_to recipe_favorites_path(recipe.id), method: :post do %>
+                      <i class="fa fa-heart like-btn"></i>
+                    <% end %>
+                    <span>お気に入り数: </span>
                     <%= recipe.favorites.count %>
-                  <% end %>
-                </p>
-              <% end %>
+                  </p>
+                <% end %>
               <% else %>
                 <p><span>お気に入り数: </span><%= recipe.favorites.count %></p>
               <% end %>
