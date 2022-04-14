@@ -38,6 +38,9 @@
 <h2>・レシピ投稿ページ</h2>
 <p><img width="1439" alt="20220414_ポートフォリオ、レシピ投稿" src="https://user-images.githubusercontent.com/79039664/163278294-05d983c5-4f1a-4d45-a1ea-35fdbc4788cb.png"></p>
 <br>
+<h2>・マイプロフィールページ</h2>
+<p><img width="1440" alt="20220414_ポートフォリオ、マイページ" src="https://user-images.githubusercontent.com/79039664/163373269-d7868cb4-d604-497a-89ba-432ce9eb2e74.png"></p>
+<br>
 <h1>◯実装機能</h1>
 <br>
 <p>・ログイン・ログアウト機能</p>
