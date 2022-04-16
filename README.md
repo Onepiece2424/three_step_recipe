@@ -36,7 +36,7 @@
 <p><img width="1438" alt="20220414_ポートフォリオ、サインアップ" src="https://user-images.githubusercontent.com/79039664/163277899-523d70ed-fad2-4a67-afa7-7af1bd12506c.png"></p>
 <br>
 <h2>・ログインページ</h2>
-<p>ログインページでは、ユーザーのEメールとパスワードを入力することでログインする事ができます。</p>
+<p>ログインページでは、ユーザーのEメールアドレスとパスワードを入力することでログインする事ができます。</p>
 <p><img width="1440" alt="20220414_ポートフォリオ、ログイン" src="https://user-images.githubusercontent.com/79039664/163278074-b8f82c1a-e47f-4265-8e2c-0be3f354c129.png"></p>
 <br>
 <h2>・メインページ</h2>
