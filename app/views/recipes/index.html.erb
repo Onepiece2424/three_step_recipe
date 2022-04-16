@@ -41,8 +41,10 @@
                 <div class="card__overviewtext">
                   <div class="recipe_username">Username:<%= recipe.user.username %></div>
                   <div class="recipe_edit_delete_link">
-                    <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark recipe_edit" %>
-                    <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark recipe_delete" %>
+                    <% if user_signed_in? && current_user.id == recipe.user_id %>
+                      <%= link_to 'Edit', edit_recipe_path(recipe), class:"userList text-dark recipe_edit" %>
+                      <%= link_to 'Delete', recipe_path(recipe), method: :delete, class:"userList text-dark recipe_delete" %>
+                    <% end %>
                   </div>
                 </div>
                 <% if user_signed_in? %>
