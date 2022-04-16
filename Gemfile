@@ -69,3 +69,4 @@ gem 'ransack'
 gem 'font-awesome-rails'
 gem 'pg', group: :production
 gem "aws-sdk-s3", require: false
+gem 'rails_admin', '~> 2.0'
