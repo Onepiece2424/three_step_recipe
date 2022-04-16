@@ -53,7 +53,8 @@
 <h2>・プロフィールページ</h2>
 <p>プロフィールページでは、ユーザー画像、ユーザー名、Eメールアドレス、レシピ投稿数、お気に入りしたレシピ数、ユーザー自身がお気に入りしたレシピを参照する事ができます。</p>
 <p>また、ユーザー画像もこのページから変更する事ができます。</p>
-<p><img width="1440" alt="20220414_ポートフォリオ、マイページ" src="https://user-images.githubusercontent.com/79039664/163373269-d7868cb4-d604-497a-89ba-432ce9eb2e74.png"></p>
+<p><img width="1435" alt="20220416_ポートフォリオマイページ①" src="https://user-images.githubusercontent.com/79039664/163656313-467d4e6b-4d03-44b8-9b51-165d00ea2528.png"></p>
+<p><img width="1431" alt="20220416_ポートフォリオマイページ②" src="https://user-images.githubusercontent.com/79039664/163656334-67fdbca8-81b2-4f31-869b-00b47387e507.png"></p>
 <br>
 <h1>◯実装機能</h1>
 <br>
