@@ -42,7 +42,9 @@
 <h2>・メインページ</h2>
 <p>メインページでは、すべての投稿されたレシピ、ユーザー自身が作成したレシピ、お気に入り数の多いレシピなどを参照することができます。</p>
 <p>また、このページからキーワード検索し、検索したいレシピを見つけることもできます。</p>
-<p><img width="1432" alt="20220414_ポートフォリオ、メインページ" src="https://user-images.githubusercontent.com/79039664/163278221-c6bbaae8-383d-4e76-8793-5ea436a61680.png"></p>
+<p><img width="1428" alt="20220416_ポートフォリオ、メインページ①" src="https://user-images.githubusercontent.com/79039664/163656240-7505c0ae-5700-4fb2-aea2-f9ac6c0b095b.png"></p>
+<p><img width="1425" alt="20220416_ポートフォリオ、メインページ②" src="https://user-images.githubusercontent.com/79039664/163656265-c298c617-bd5c-46eb-a1e2-afca873bf4d1.png"></p>
+<p><img width="1440" alt="20220416_ポートフォリオ、メインページ③" src="https://user-images.githubusercontent.com/79039664/163656278-1128c4d8-5a61-4855-b803-02fa124f2bef.png"></p>
 <br>
 <h2>・レシピ投稿ページ</h2>
 <p>レシピ投稿ページでは、レシピ名、レシピ手順を3つ、レシピ画像を3つ登録し、投稿したいレシピを作成し、投稿する事ができます。</p>
