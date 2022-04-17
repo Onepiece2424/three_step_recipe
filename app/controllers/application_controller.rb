@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   # before_action :check_admin_authorization
-  authorize_resource :class => false
+  authorize_resource class: false
 
   # def check_admin_authorization
   #   if request.path.start_with?('/admin')
