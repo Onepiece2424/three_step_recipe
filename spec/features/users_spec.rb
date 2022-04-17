@@ -10,7 +10,7 @@ RSpec.feature 'ログインとログアウト', type: :feature do
     fill_in "user[password]", with: '12345678'
     click_button "Log in（ログイン）"
     visit recipes_path
-    expect(page).to have_content "Signed in successfully."
+    expect(page).to have_content "ログインしました。"
   end
 
   feature 'マイページのテスト' do
