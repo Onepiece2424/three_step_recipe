@@ -2,6 +2,7 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:top]
   before_action :set_q, only: [:index, :search]
   before_action :ensure_user, only: [:edit, :update, :destroy]
+  authorize_resource
 
   def index
     @recipes = Recipe.with_attached_images.includes(:user).order(:updated_at,:created_at).reverse_order
