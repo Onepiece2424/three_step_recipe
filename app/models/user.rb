@@ -1,14 +1,14 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  enum role: { general: 1, admin: 2,guest: 3 }
+  enum role: { general: 1, admin: 2, guest: 3 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :recipes, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :favorite_recipes, through: :favorites, source: :recipe
-  has_many :user_roles
+  has_many :user_roles, dependent: :destroy
   has_many :roles, through: :user_roles
   has_one_attached :avatar
 
