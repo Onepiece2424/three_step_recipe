@@ -12,12 +12,9 @@ class Ability
     elsif user.general?
       can :manage, :all
       cannot :access_admin_page, :all
-    elsif user.guest?
-      can :read, :all
-      cannot :access_admin_page, :all
     else
       can :read, :all
-      cannot :admin, :all
+      cannot :access_admin_page, :all
     end
   end
 end
