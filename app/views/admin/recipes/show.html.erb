@@ -1,0 +1,67 @@
+<div class="main_page">
+<div class="recipe_title">Recipe Title:<%= @recipe.title %></div>
+<div class="recipe_title">Recipe creator's username:<%= @recipe.user.username %></div>
+  <div class="recipe_detail_contents container">
+    <div class="row">
+      <div class="main_left col-sm-12 col-md-6">
+        <div class="image_contents">
+          <% if @recipe.images.attached? %>
+            <% @recipe.images.each do |image| %>
+            <div class="image_content_block">
+              <%= image_tag image.variant(resize: "440x220!"), class: "img" %>
+            </div>
+            <% end %>
+          <% else %>
+            <div class="image_content_block">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
+            <div class="image_content">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
+            <div class="image_content">
+              <%= image_tag "/images/black-bean-close-up-cooked-16407741.png", size: '440x220' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="main_right col-sm-12 col-md-6">
+        <div class="process_block">
+          <p>Recipe procedure①</p>
+          <%= @recipe.process1 %>
+        </div>
+        <div class="process_block">
+          <p>Recipe procedure②</p>
+          <%= @recipe.process2 %>
+        </div>
+        <div class="process_block">
+          <p>Recipe procedure③</p>
+          <%= @recipe.process3 %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comment_block">
+  <h2>コメント一覧</h2>
+    <div class="comment_main">
+      <% @comments.each do |c| %>
+        <div class="comment_text">
+          <%= c.user.username %>
+          <br>
+          <div><%= c.comment_content %></div>
+          <br>
+          <%= link_to "Delete a comment", recipe_comment_path(c.recipe.id,c.id), data: {confirm: '本当に削除しますか？'}, method: :delete %>
+        </div>
+      <% end %>
+    </div>
+    <div class="comment_button">
+    <p>コメント記入</p>
+      <%= form_with model: [@recipe, @comment] do |f| %>
+        <%= f.text_field :comment_content %>
+        <%= f.hidden_field :recipe_id, value: @recipe.id %>
+        <br>
+        <br>
+        <%= f.submit 'コメントする' %>
+      <% end %>
+    </div>
+  </div>
+</div>
