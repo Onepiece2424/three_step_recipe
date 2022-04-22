@@ -6,15 +6,15 @@ class Ability
   def initialize(user)
     can :manage, :session
     user ||= User.new
-    if user.has_attribute?(:admin)
+    if user && user.admin?
+      can :access, :rails_admin
       can :manage, :all
-      can :access_admin_page, :all
-    elsif user.has_attribute?(:general)
+    elsif user
       can :manage, :all
-      cannot :access_admin_page, :all
     else
+      cannot :access, :rails_admin
+      cannot :manage, :dashboard
       can :read, :all
-      cannot :access_admin_page, :all
     end
   end
 end
