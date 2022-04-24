@@ -2,7 +2,7 @@
 <br>
 <h2>3 step recipes</h2>
 <p>リンク先</p>
-<p>https://stark-beach-93053.herokuapp.com/</p>
+<p>https://featurelinkfix.herokuapp.com/</p>
 <br>
 <h1>◯概要</h1>
 <br>
