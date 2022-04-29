@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
     @recipes = Recipe.with_attached_images.includes(:user).order(:updated_at,:created_at).reverse_order
     @my_recipes = current_user.recipes.order(:updated_at,:created_at).reverse_order
     @all_ranks = Recipe.find(Favorite.group(:recipe_id).order('count(recipe_id) desc').limit(5).pluck(:recipe_id))
+    @medias = Instagram.tag_recent_media(URI.encode("子ども"))
   end
 
   def search

@@ -185,3 +185,8 @@
     </div>
   </div>
 </div>
+<% @medias.each do |media| %>
+  <%= link_to media.link, :target => "_blank" do %>
+    <%= image_tag(media.images.low_resolution.url) %>
+  <% end %>
+<% end %>
