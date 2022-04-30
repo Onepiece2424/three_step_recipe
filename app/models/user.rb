@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   def self.guest
-    find_or_create_by!(email: 'guest@example.com') do |user|
+    find_or_create_by!(email: 'guest@example.com',role: 'guest') do |user|
       user.password = SecureRandom.urlsafe_base64
     end
   end
