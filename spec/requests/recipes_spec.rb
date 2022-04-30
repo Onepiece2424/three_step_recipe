@@ -29,10 +29,10 @@ RSpec.describe "recipeのテスト", type: :request do
     end
 
     it 'レスポンスにレシピカード情報が含まれること' do
-      expect(response.body). to include recipe.title
-      expect(response.body). to include recipe.user.username
-      expect(response.body). to include recipe_path(recipe.id)
-      expect(response.body). to include edit_recipe_path(recipe.id)
+      expect(response.body).to include recipe.title
+      expect(response.body).to include recipe.user.username
+      expect(response.body).to include recipe_path(recipe.id)
+      expect(response.body).to include edit_recipe_path(recipe.id)
     end
   end
 
