@@ -727,6 +727,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
 }
+
 .insta_img {
   list-style: none;
   width: 20%;
@@ -737,10 +738,12 @@ h3 {
   height: auto;
   display: block;
 }
+
 .insta_img a {
   position: relative;
   display: block;
 }
+
 .insta_img a .like {
   position: absolute;
   width: 100%;
