@@ -24,23 +24,6 @@ $('.back-to-top').on('click', (e) => {
 // ページの途中でリロード（再読み込み）された場合でも、ボタンが表示されるようにする
 updateButton();
 
-
-// $.ajax({
-//   type: 'GET',
-//   url: 'https://graph.facebook.com/v13.0/#{gon.instagram_id}?fields=name%2Cmedia.limit(10)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Cthumbnail_url%7D&access_token=#{gon.instagram_access_token}',
-//   dataType: 'json',
-//   success: function(json) {
-//       var ig = json.media.data;
-//       var html = "";
-//       for (var i = 0; i < ig.length; i++) {
-//           var link = ig[i].permalink;
-//           var image = ig[i].media_url;
-//           html += '<div><a href="' + link + '" target="_blank"><img src="' + image + '"></a></div>'
-//       }
-//       $(".instagram").append(html);
-//   }
-// });
-
 $(function(){
   let list = '';
   const limit = 20; //表示件数
