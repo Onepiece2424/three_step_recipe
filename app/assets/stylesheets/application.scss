@@ -409,7 +409,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-30%, -50%)rotate(-45deg);
+  transform: translate(-30%, -50%) rotate(-45deg);
 }
 
 /* 右 */
@@ -425,7 +425,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-70%, -50%)rotate(135deg);
+  transform: translate(-70%, -50%) rotate(135deg);
 }
 
 //recipe/newアクションページ
@@ -720,4 +720,53 @@ h3 {
   font-size: 25px;
   color: #e54747;
   margin-left: 20px;
+}
+
+//Instagram 画像
+.insta_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.insta_img {
+  list-style: none;
+  width: 20%;
+}
+
+.insta_media {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.insta_img a {
+  position: relative;
+  display: block;
+}
+
+.insta_img a .like {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #fff;
+  opacity: 0.6;
+  text-shadow: 0 0 7px #000;
+}
+
+@media (max-width: 700px) {
+  .insta_list {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .insta_img {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
