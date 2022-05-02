@@ -6,7 +6,9 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.with_attached_images.includes(:user).order(:updated_at,:created_at).reverse_order
     @my_recipes = current_user.recipes.order(:updated_at,:created_at).reverse_order
-    @all_ranks = Recipe.find(Favorite.group(:recipe_id).order('count(recipe_id) desc').limit(6).pluck(:recipe_id))
+    @all_ranks = Recipe.find(Favorite.group(:recipe_id).order('count(recipe_id) desc').limit(5).pluck(:recipe_id))
+    gon.instagram_access_token = ENV['INSTAGRAM_ACCESS_TOKEN']
+    gon.instagram_id = ENV['INSTAGRAM_ID']
   end
 
   def search
