@@ -60,16 +60,16 @@ $(function(){
 
           // 一覧を変数listに格納
           list +=
-          `<li>
+          `<div class="insta_img">
             <a href="${item.permalink}" target="_blank" rel="noopener">
-            <img src="${media}">
-
-          </li>`;
+            <img src="${media}", class="insta_media">
+            <span class="like"><i class="fa fa-heart"></i>${item.like_count}</span></a>
+          </div>`;
         }
 
       })
     });
-  $('#insta').html(`<ul>${list}</ul>`);
+  $('#insta').html(`<div class="insta_list">${list}</div>`);
   }).fail(function(jqXHR, status) {
     $('#insta').html('<p>読み込みに失敗しました。</p>');
   });
