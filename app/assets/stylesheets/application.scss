@@ -758,3 +758,15 @@ h3 {
   opacity: 0.6;
   text-shadow: 0 0 7px #000;
 }
+
+@media (max-width: 700px) {
+  .insta_list {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .insta_img {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
