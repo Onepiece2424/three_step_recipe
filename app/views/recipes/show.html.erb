@@ -1,6 +1,6 @@
 <div class="main_page">
-<div class="recipe_title">Recipe Title:<%= @recipe.title %></div>
-<div class="recipe_title">Recipe creator's username:<%= @recipe.user.username %></div>
+  <div class="recipe_title">Recipe Title:<%= @recipe.title %></div>
+  <div class="recipe_title">Recipe creator's username:<%= @recipe.user.username %></div>
   <div class="recipe_detail_contents container">
     <div class="row">
       <div class="main_left col-sm-12 col-md-6">
@@ -54,7 +54,7 @@
       <% end %>
     </div>
     <div class="comment_button">
-    <p>コメント記入</p>
+      <p>コメント記入</p>
       <%= form_with model: [@recipe, @comment] do |f| %>
         <%= f.text_field :comment_content %>
         <%= f.hidden_field :recipe_id, value: @recipe.id %>
