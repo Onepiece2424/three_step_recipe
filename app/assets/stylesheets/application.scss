@@ -611,11 +611,7 @@ button {
 }
 
 .sub_image {
-  background-image: url("/images/black-bean-close-up-cooked-16407741.png");
   height: auto;
-  width: 100%;
-  margin: 0;
-  background-size: cover;
 }
 
 .main_explain {
@@ -625,6 +621,23 @@ button {
   font-size: 25px;
   color: #0000BB;
   background-color: rgba(255, 255, 255, 0.562);
+}
+
+.main_explain_flex {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 50px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  color: #0000BB;
+  background-color: rgba(255, 255, 255, 0.562);
+}
+
+.explain_img img {
+  width:100%;
+  max-width: 100%;
+  height: auto;
 }
 
 //マイページ
