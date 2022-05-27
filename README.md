@@ -2,7 +2,7 @@
 <br>
 <h2>3 step recipes</h2>
 <p>リンク先</p>
-<p>https://secure-peak-63925.herokuapp.com/</p>
+<p>https://safe-garden-76432.herokuapp.com/</p>
 <br>
 <h1>◯概要</h1>
 <br>
