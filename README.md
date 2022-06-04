@@ -1,7 +1,8 @@
 <h1>◯サービス名</h1>
 <br>
-<h2>3 step recipes</h2>
-<p>リンク先</p>
+<h2><a href= "https://www.threesteprecipes.com/">3 step recipes</a></h2>
+<br>
+<p>*リンク先(heroku、緊急用)</p>
 <p>https://safe-garden-76432.herokuapp.com/</p>
 <br>
 <h1>◯概要</h1>
