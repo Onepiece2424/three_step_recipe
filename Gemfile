@@ -72,3 +72,4 @@ gem "aws-sdk-s3", require: false
 gem 'cancancan'
 gem 'dotenv-rails'
 gem 'gon'
+gem 'react-rails'
